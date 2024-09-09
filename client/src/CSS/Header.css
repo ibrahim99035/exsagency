@@ -55,12 +55,23 @@
   
   .nav.open {
     display: flex; /* Display the menu when open */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center the items horizontally */
   }
   
   .nav.open ul {
     display: flex; /* Ensure the list items are displayed */
     flex-direction: column; /* Stack items vertically */
-    align-items: center; /* Center the items horizontally */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+  }
+  
+  .nav.open ul li {
+    margin-bottom: 15px; /* Space between items */
+  }
+  
+  .nav.open ul li:last-child {
+    margin-bottom: 0; /* Remove bottom margin from the last item */
   }
   
   .menu-toggle.open .bar:nth-child(1) {
@@ -85,7 +96,6 @@
       background-color: #143d63;
       padding: 20px;
       display: none; /* Hide the menu by default on mobile */
-      flex-direction: column; /* Stack items vertically */
     }
   
     .nav.open {
@@ -93,9 +103,8 @@
     }
   
     .nav ul {
-      flex-direction: column;
+      flex-direction: column; /* Stack items vertically */
       text-align: center;
-      padding: 0;
     }
   
     .menu-toggle {
