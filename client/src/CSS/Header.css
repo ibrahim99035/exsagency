@@ -1,3 +1,5 @@
+/* Header.css */
+
 .header {
     display: flex;
     justify-content: space-between;
@@ -5,70 +7,76 @@
     padding: 20px;
     background-color: #24995b;
     color: white;
-}
+  }
   
-.logo img {
+  .logo img {
     width: 120px;
     position: relative;
     z-index: 1000;
-}
+  }
   
-.nav {
+  .nav {
     display: flex;
     justify-content: space-around;
     width: 50%;
     direction: rtl;
     position: relative;
     z-index: 1000;
-}
+  }
   
-.nav ul {
+  .nav ul {
     display: flex;
     list-style: none;
     gap: 20px;
-}
+  }
   
-.nav ul li a {
+  .nav ul li a {
     color: white;
     text-decoration: none;
     font-size: 28px;
     font-weight: bolder;
-}
+  }
   
-.menu-toggle {
+  .menu-toggle {
     display: none;
     cursor: pointer;
     flex-direction: column;
     position: relative;
     z-index: 1000;
     gap: 5px;
-}
+  }
   
-.menu-toggle .bar {
+  .menu-toggle .bar {
     width: 30px;
     height: 3px;
     background-color: white;
     transition: all 0.3s ease;
-}
+  }
   
-.nav.open ul {
-    display: block;
-}
+  .nav.open {
+    display: flex; /* Display the menu when open */
+  }
   
-.menu-toggle.open .bar:nth-child(1) {
+  .nav.open ul {
+    display: flex; /* Ensure the list items are displayed */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center the items horizontally */
+  }
+  
+  .menu-toggle.open .bar:nth-child(1) {
     transform: rotate(45deg) translateY(7px);
-}
+  }
   
-.menu-toggle.open .bar:nth-child(2) {
+  .menu-toggle.open .bar:nth-child(2) {
     opacity: 0;
-}
+  }
   
-.menu-toggle.open .bar:nth-child(3) {
+  .menu-toggle.open .bar:nth-child(3) {
     transform: rotate(-45deg) translateY(-7px);
-}
+  }
   
-/* Responsive for mobile */
-@media (max-width: 768px) {
+  /* Responsive for mobile */
+  @media (max-width: 768px) {
     .nav {
       position: absolute;
       top: 70px;
@@ -76,15 +84,21 @@
       right: 0;
       background-color: #143d63;
       padding: 20px;
-      display: none;
+      display: none; /* Hide the menu by default on mobile */
+      flex-direction: column; /* Stack items vertically */
+    }
+  
+    .nav.open {
+      display: flex; /* Show the menu when open */
     }
   
     .nav ul {
       flex-direction: column;
       text-align: center;
+      padding: 0;
     }
   
     .menu-toggle {
-      display: flex;
+      display: flex; /* Show the burger menu icon */
     }
-}  
+  }  

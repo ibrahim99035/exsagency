@@ -18,16 +18,18 @@ const PartenersSlider = () => {
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 2, // Show 2 slides on medium screens
-        }
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
       },
       {
         breakpoint: 600,
         settings: {
-          slidesToShow: 1, // Show 1 slide on small screens
-        }
-      }
-    ]
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
 
   return (
