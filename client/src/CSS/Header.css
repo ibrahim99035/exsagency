@@ -39,6 +39,8 @@
     display: none;
     cursor: pointer;
     flex-direction: column;
+    position: relative;
+    z-index: 1000;
     gap: 5px;
 }
   
