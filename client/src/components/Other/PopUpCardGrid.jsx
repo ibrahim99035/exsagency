@@ -40,18 +40,21 @@ const PopUpCardGrid = () => {
   ];
 
   return (
-    <div className="popcard-grid">
-      {cards.map((card, index) => (
-        <div ref={card.ref} key={index}>
-          <PopUpCard
-            image={card.image}
-            title={card.title}
-            description={card.description}
-            icon={card.icon}
-            isVisible={card.inView}
-          />
-        </div>
-      ))}
+    <div id='popupcardcontainer'>   
+      <h2>قيمنا</h2> 
+      <div className="popcard-grid">
+        {cards.map((card, index) => (
+          <div ref={card.ref} key={index}>
+            <PopUpCard
+              image={card.image}
+              title={card.title}
+              description={card.description}
+              icon={card.icon}
+              isVisible={card.inView}
+            />
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

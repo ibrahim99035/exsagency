@@ -12,6 +12,13 @@
   .popcard-grid::-webkit-scrollbar {
     display: none; /* Hide scrollbar */
   }
+
+#popupcardcontainer{
+  text-align: center;
+  color: #fff;
+  position: relative;
+  z-index: 1000;
+}
   
   @media (max-width: 668px) {
     .popcard-grid {

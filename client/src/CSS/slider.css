@@ -56,3 +56,14 @@
   background-color: #18663d; /* Darker shade on hover */
   transform: translateY(-3px); /* Slight lift on hover */
 }
+
+.testimonial-slide{
+  background-color: #18663d;
+  min-height: 100px;
+  border: black solid 1px;
+  border-radius: 15px;
+  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

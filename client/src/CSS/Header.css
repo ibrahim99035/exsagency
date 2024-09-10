@@ -108,6 +108,6 @@
     }
   
     .menu-toggle {
-      display: flex; /* Show the burger menu icon */
+      display: flex; 
     }
   }  
