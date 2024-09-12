@@ -10,6 +10,7 @@
     margin-bottom: 2rem;
     position: relative;
     z-index: 1000;
+    direction: rtl;
 }
 
 .privacy-policy-container header {
@@ -51,6 +52,10 @@
     margin-top: 20px;
     color: #777; /* Adjusted gray color */
     font-size: 14px;
+}
+
+.privacy-policy-container ul{
+    font-size: 20px;
 }
 
 #plogoDiv {

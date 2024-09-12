@@ -8,6 +8,7 @@
     text-align: right; /* Right-to-left text alignment */
     margin-top: 2rem;
     margin-bottom: 2rem;
+    direction: rtl;
     position: relative;
     z-index: 1000;
 }

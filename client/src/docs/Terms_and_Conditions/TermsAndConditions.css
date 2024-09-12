@@ -9,6 +9,7 @@
     text-align: right; /* Right-to-left text alignment */
     margin-top: 2rem;
     margin-bottom: 2rem;
+    direction: rtl;
     position: relative;
     z-index: 1000;
 }
@@ -53,6 +54,14 @@
     margin-top: 20px;
     color: #777; /* Adjusted gray color */
     font-size: 14px;
+}
+
+.terms-and-conditions-container ul{
+    font-size: 20px;
+}
+
+.terms-and-conditions-container a{
+    color: blue;
 }
 
 #plogoDiv {
