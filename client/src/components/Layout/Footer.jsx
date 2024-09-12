@@ -51,7 +51,7 @@ const Footer = () => {
         <div className="footer-section">
           <h3>الدعم</h3>
           <ul>
-            <li><a href="/faq">الأسئلة الشائعة</a></li> <br />
+            <li><a href="/fqa">الأسئلة الشائعة</a></li> <br />
             <li><a href="#help-center">مركز المساعدة</a></li> <br />
             <li><a href="/contact-us">تواصل معنا</a></li> <br />
             <li><a href="/privacy-policy">سياسة الخصوصية</a></li> <br />
