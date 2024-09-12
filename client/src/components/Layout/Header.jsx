@@ -15,10 +15,10 @@ const Header = () => {
       </div>
       <nav className={`nav ${menuOpen ? 'open' : ''}`}>
         <ul>
-          <li><a href="#home">الرئيسية</a></li>
-          <li><a href="#about">عنا</a></li>
+          <li><a href="/">الرئيسية</a></li>
+          <li><a href="/about-us">عنا</a></li>
           <li><a href="#services">الخدمات</a></li>
-          <li><a href="#contact">تواصل معنا</a></li>
+          <li><a href="/contact-us">تواصل معنا</a></li>
           <li><a href="#about">المعارض</a></li>
         </ul>
       </nav>

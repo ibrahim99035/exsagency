@@ -6,6 +6,10 @@ import Auth from './pages/Auth';
 import AboutUs from './pages/AboutUs';
 import Contact from './pages/Contact';
 
+import IntellectualPropertyRights from './docs/IntellectualPropertyRights/IntellectualPropertyRights';
+import PrivacyPolicy from './docs/Privacy_policy/PrivacyPolicy';
+import TermsAndConditions from './docs/Terms_and_Conditions/TermsAndConditions';
+
 import { Provider } from 'react-redux';
 import store from './redux/store';
 
@@ -45,6 +49,30 @@ function App() {
               element = {
                 <>
                   <Contact />
+                </>
+              }
+            />
+            <Route
+              path='/intellectual-property-rights'
+              element = {
+                <>
+                  <IntellectualPropertyRights />
+                </>
+              }
+            />
+            <Route
+              path='/privacy-policy'
+              element = {
+                <>
+                  <PrivacyPolicy />
+                </>
+              }
+            />
+            <Route
+              path='/terms-and-conditions'
+              element = {
+                <>
+                  <TermsAndConditions />
                 </>
               }
             />

@@ -37,11 +37,11 @@ const Footer = () => {
         <div className="footer-section">
           <h3>المصادر</h3>
           <ul>
-            <li><a href="#blog">المدونة</a></li>
-            <li><a href="#news">الأخبار</a></li>
-            <li><a href="#careers">المهن</a></li>
-            <li><a href="#partners">الشركاء</a></li>
-            <li><a href="auth">المدراء و المسؤوؤلين</a></li>
+            <li><a href="#blog">المدونة</a></li> <br />
+            <li><a href="#news">الأخبار</a></li> <br />
+            <li><a href="#careers">المهن</a></li> <br />
+            <li><a href="#partners">الشركاء</a></li> <br />
+            <li><a href="/auth">المدراء و المسؤوؤلين</a></li> <br />
           </ul>
         </div>
 
@@ -49,10 +49,12 @@ const Footer = () => {
         <div className="footer-section">
           <h3>الدعم</h3>
           <ul>
-            <li><a href="#faq">الأسئلة الشائعة</a></li>
-            <li><a href="#help-center">مركز المساعدة</a></li>
-            <li><a href="#contact">تواصل معنا</a></li>
-            <li><a href="#privacy-policy">سياسة الخصوصية</a></li>
+            <li><a href="#faq">الأسئلة الشائعة</a></li> <br />
+            <li><a href="#help-center">مركز المساعدة</a></li> <br />
+            <li><a href="/contact-us">تواصل معنا</a></li> <br />
+            <li><a href="/privacy-policy">سياسة الخصوصية</a></li> <br />
+            <li><a href="/intellectual-property-rights">حقوق الملكية الفكرية</a></li> <br />
+            <li><a href="/terms-and-conditions">شروط الخدمة</a></li> <br />
           </ul>
         </div>
 
@@ -95,7 +97,7 @@ const Footer = () => {
       <div className="footer-bottom">
         <p>&copy; 2024 معارض الضجيج. كل الحقوق محفوظة.</p>
         <p>
-          <a href="#terms">شروط الخدمة</a> | <a href="#privacy-policy">سياسة الخصوصية</a>
+          <a href="/terms-and-conditions">شروط الخدمة</a> | <a href="/privacy-policy">سياسة الخصوصية</a>
         </p>
       </div>
     </footer>
