@@ -9,6 +9,7 @@ import Contact from './pages/Contact';
 import IntellectualPropertyRights from './docs/IntellectualPropertyRights/IntellectualPropertyRights';
 import PrivacyPolicy from './docs/Privacy_policy/PrivacyPolicy';
 import TermsAndConditions from './docs/Terms_and_Conditions/TermsAndConditions';
+import FQA from './docs/FAQ/FAQ';
 
 import { Provider } from 'react-redux';
 import store from './redux/store';
@@ -73,6 +74,14 @@ function App() {
               element = {
                 <>
                   <TermsAndConditions />
+                </>
+              }
+            />
+            <Route
+              path='/fqa'
+              element = {
+                <>
+                  <FQA />
                 </>
               }
             />
