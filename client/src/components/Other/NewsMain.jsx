@@ -177,14 +177,14 @@ const NewsMain = () => {
       </div>
 
       {/* Featured News */}
-      <div className="featured-news">
+      {/* <div className="featured-news">
         <img src={newsData[selectedCategory][0].image} alt="Featured" />
         <div className="featured-news-content">
           <h2>{newsData[selectedCategory][0].title}</h2>
           <p>{newsData[selectedCategory][0].description}</p>
           <span>{newsData[selectedCategory][0].date}</span>
         </div>
-      </div>
+      </div> */}
 
       {/* News Grid */}
       <div className="news-grid">

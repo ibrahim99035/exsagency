@@ -133,3 +133,30 @@
     color: #777;
   }
   
+
+  @media (max-width: 768px) {
+    .news-tabs {
+      flex-direction: column;
+      width: 50%;
+      margin: auto;
+      margin-bottom: 20px;
+    }
+  
+    .news-tabs button {
+      margin: 5px 0;
+    }
+  
+    .featured-news img {
+      width: 100%;
+      height: auto;
+    }
+
+    .news-card {
+      width: 80%;
+      margin: auto;
+    }
+  
+    .news-card img {
+      height: 150px;
+    }
+  }
