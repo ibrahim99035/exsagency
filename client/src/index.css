@@ -145,3 +145,24 @@ main {
   max-width: 300px;
   margin: auto;
 }
+
+#hometext{
+  text-align: center;
+  color: white;
+  direction: rtl;
+  margin: 50px;
+  position: relative;
+  z-index: 1000;
+}
+
+#homelogo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 1000;
+}
+
+#homelogo img{
+  max-width: 200px;
+}
