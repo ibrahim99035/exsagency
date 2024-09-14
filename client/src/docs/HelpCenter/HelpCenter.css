@@ -131,6 +131,7 @@
     .help-center-menu {
         max-width: 90%;
         margin: auto;
+        margin-bottom: 30px;
     }
     .menu-button{
         max-width: 90px;
