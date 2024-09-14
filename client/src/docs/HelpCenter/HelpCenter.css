@@ -126,3 +126,14 @@
 .submit-button:hover {
     background-color: #24995b;
 }  
+
+@media (max-width: 768px) {
+    .help-center-menu {
+        max-width: 90%;
+        margin: auto;
+    }
+    .menu-button{
+        max-width: 90px;
+        font-size: 15px;
+    }
+}
