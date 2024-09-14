@@ -41,8 +41,7 @@ const FAQ = () => {
     <>
       <div className='overlay-image'></div>
       <Header />
-      <HeroSection />
-      <Up />
+      <HeroSection />   
       <div className="faq-container">
         <h2 className="faq-title">الأسئلة الشائعة</h2>
         <div className="faq-items">
@@ -70,6 +69,7 @@ const FAQ = () => {
           ))}
         </div>
       </div>
+      <Up />
       <Footer />
     </>
   );

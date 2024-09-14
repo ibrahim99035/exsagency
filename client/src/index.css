@@ -125,3 +125,23 @@ main {
     overflow: hidden;
     /* min-height: 100vh; */
 }
+
+#news-page h1{
+  color: white;
+  text-align: center;
+  position: relative;
+  z-index: 1000;
+}
+
+#news-page-logo{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1000;
+}
+
+#news-page-logo img{
+  max-width: 300px;
+  margin: auto;
+}

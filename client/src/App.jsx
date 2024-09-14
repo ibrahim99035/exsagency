@@ -5,11 +5,15 @@ import HomePage from './pages/HomePage';
 import Auth from './pages/Auth';
 import AboutUs from './pages/AboutUs';
 import Contact from './pages/Contact';
+import News from './pages/News';
 
 import IntellectualPropertyRights from './docs/IntellectualPropertyRights/IntellectualPropertyRights';
 import PrivacyPolicy from './docs/Privacy_policy/PrivacyPolicy';
 import TermsAndConditions from './docs/Terms_and_Conditions/TermsAndConditions';
 import FQA from './docs/FAQ/FAQ';
+import HelpCenter from './docs/HelpCenter/HelpCenter';
+import Parteners from './pages/Parteners';
+import Careers from './pages/Careers';
 
 import { Provider } from 'react-redux';
 import store from './redux/store';
@@ -34,6 +38,14 @@ function App() {
               element = {
                 <>
                   <Auth />
+                </>
+              }
+            />
+            <Route
+              path='/news'
+              element = {
+                <>
+                  <News />
                 </>
               }
             />
@@ -82,6 +94,30 @@ function App() {
               element = {
                 <>
                   <FQA />
+                </>
+              }
+            />
+            <Route
+              path='/help-center'
+              element = {
+                <>
+                  <HelpCenter />
+                </>
+              }
+            />
+            <Route
+              path='/parteners'
+              element = {
+                <>
+                  <Parteners />
+                </>
+              }
+            />
+            <Route
+              path='/careers'
+              element = {
+                <>
+                  <Careers />
                 </>
               }
             />
