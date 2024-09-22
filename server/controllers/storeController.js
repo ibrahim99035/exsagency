@@ -1,9 +1,35 @@
 // backend/controllers/storeController.js
 const Store = require('../models/Store');
 
+const { imageToBase64, base64ToImage } = require('../utils/uploadHelper');
+
+const multer = require('multer');
+const fs = require('fs');
+const path = require('path');
+
+// Set up multer for file upload
+const storage = multer.diskStorage({
+    destination: function (req, file, cb) {
+        const uploadPath = 'uploads/'; // Create this directory in your project
+        cb(null, uploadPath);
+    },
+    filename: function (req, file, cb) {
+        cb(null, `${Date.now()}-${file.originalname}`);
+    },
+});
+
+const upload = multer({ storage: storage });
+
 // Create a new store
 const createStore = async (req, res) => {
-    const { name, description, relatedMall, address, openingDate, closingDate, coverImage } = req.body;
+    const { name, description, relatedMall, address, openingDate, closingDate } = req.body;
+
+    let coverImage = '';
+    if (req.file) {
+        const imagePath = path.join(__dirname, '../uploads', req.file.filename);
+        coverImage = imageToBase64(imagePath);
+        fs.unlinkSync(imagePath); // Optional: delete the image after converting to base64
+    }
 
     const store = new Store({
         name,
@@ -15,8 +41,13 @@ const createStore = async (req, res) => {
         coverImage,
     });
 
-    const createdStore = await store.save();
-    res.status(201).json(createdStore);
+    try {
+        const createdStore = await store.save();
+        res.status(201).json(createdStore);
+    } catch (error) {
+        res.status(400).json({ message: 'Error creating Store', error });
+    }
+    
 };
 
 // Get all stores
@@ -38,7 +69,7 @@ const getStoreById = async (req, res) => {
 
 // Update a store
 const updateStore = async (req, res) => {
-    const { name, description, relatedMall, address, openingDate, closingDate, coverImage } = req.body;
+    const { name, description, relatedMall, address, openingDate, closingDate } = req.body;
 
     const store = await Store.findById(req.params.id);
 
@@ -49,7 +80,12 @@ const updateStore = async (req, res) => {
         store.address = address || store.address;
         store.openingDate = openingDate || store.openingDate;
         store.closingDate = closingDate || store.closingDate;
-        store.coverImage = coverImage || store.coverImage;
+        
+        if (req.file) {
+            const imagePath = path.join(__dirname, '../uploads', req.file.filename);
+            store.coverImage = imageToBase64(imagePath);
+            fs.unlinkSync(imagePath); 
+        }
 
         const updatedStore = await store.save();
         res.json(updatedStore);
@@ -60,10 +96,9 @@ const updateStore = async (req, res) => {
 
 // Delete a store
 const deleteStore = async (req, res) => {
-    const store = await Store.findById(req.params.id);
+    const store = await Store.findByIdAndDelete(req.params.id);
 
     if (store) {
-        await store.remove();
         res.json({ message: 'Store removed' });
     } else {
         res.status(404).json({ message: 'Store not found' });
@@ -76,4 +111,5 @@ module.exports = {
     getStoreById,
     updateStore,
     deleteStore,
+    upload,
 };

@@ -1,9 +1,34 @@
-// backend/controllers/productController.js
 const Product = require('../models/Product');
+
+const { imageToBase64, base64ToImage } = require('../utils/uploadHelper');
+
+const multer = require('multer');
+const fs = require('fs');
+const path = require('path');
+
+// Set up multer for file upload
+const storage = multer.diskStorage({
+    destination: function (req, file, cb) {
+        const uploadPath = 'uploads/'; // Create this directory in your project
+        cb(null, uploadPath);
+    },
+    filename: function (req, file, cb) {
+        cb(null, `${Date.now()}-${file.originalname}`);
+    },
+});
+
+const upload = multer({ storage: storage });
 
 // Create a new product
 const createProduct = async (req, res) => {
-    const { name, description, relatedStore, coverImage } = req.body;
+    const { name, description, relatedStore } = req.body;
+
+    let coverImage = '';
+    if (req.file) {
+        const imagePath = path.join(__dirname, '../uploads', req.file.filename);
+        coverImage = imageToBase64(imagePath);
+        fs.unlinkSync(imagePath); // Optional: delete the image after converting to base64
+    }
 
     const product = new Product({
         name,
@@ -13,8 +38,12 @@ const createProduct = async (req, res) => {
         createdBy: req.user._id,
     });
 
-    const createdProduct = await product.save();
-    res.status(201).json(createdProduct);
+    try {
+        const createdProduct = await product.save();
+        res.status(201).json(createdProduct);
+    } catch (error) {
+        res.status(400).json({ message: 'Error creating Store', error });
+    }
 };
 
 // Get all products
@@ -52,7 +81,12 @@ const updateProduct = async (req, res) => {
         product.name = name || product.name;
         product.description = description || product.description;
         product.relatedStore = relatedStore || product.relatedStore;
-        product.coverImage = coverImage || product.coverImage;
+        
+        if (req.file) {
+            const imagePath = path.join(__dirname, '../uploads', req.file.filename);
+            product.coverImage = imageToBase64(imagePath);
+            fs.unlinkSync(imagePath); 
+        }
 
         const updatedProduct = await product.save();
         res.json(updatedProduct);
@@ -63,14 +97,12 @@ const updateProduct = async (req, res) => {
 
 // Delete a product (only allow if the user is the creator or an admin)
 const deleteProduct = async (req, res) => {
-    const product = await Product.findById(req.params.id);
+    const product = await Product.findByIdAndDelete(req.params.id);
 
     if (product) {
         if (product.createdBy.toString() !== req.user._id.toString() && req.user.role !== 'admin') {
             return res.status(403).json({ message: 'Not authorized to delete this product' });
         }
-
-        await product.remove();
         res.json({ message: 'Product removed' });
     } else {
         res.status(404).json({ message: 'Product not found' });
@@ -83,4 +115,5 @@ module.exports = {
     getProductById,
     updateProduct,
     deleteProduct,
+    upload,
 };
