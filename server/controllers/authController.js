@@ -72,8 +72,68 @@ const getUserProfile = async (req, res) => {
     }
 };
 
+const UserApproval = async (req, res) => {
+    try {
+        const user = await User.findById(req.params.id);
+
+        if (!user) {
+            return res.status(404).json({ message: 'User not found' });
+        }
+
+        user.approval = true;  // Set approval to true
+        await user.save();
+
+        res.json({ message: 'User approved successfully', user });
+    } catch (error) {
+        res.status(500).json({ message: 'Server error', error: error.message });
+    }
+};
+
+const GetModerators = async (req, res) => {
+    try {
+        const moderators = await User.find({ role: 'moderator' });
+        res.json(moderators);
+    } catch (error) {
+        res.status(500).json({ message: 'Server error', error: error.message });
+    }
+};
+
+const GetSingleModerators = async (req, res) => {
+    try {
+        const moderator = await User.findById(req.params.id);
+
+        if (!moderator || moderator.role !== 'moderator') {
+            return res.status(404).json({ message: 'Moderator not found' });
+        }
+
+        res.json(moderator);
+    } catch (error) {
+        res.status(500).json({ message: 'Server error', error: error.message });
+    }
+};
+
+const DeleteModerator = async (req, res) =>{
+    try {
+        const moderator = await User.findById(req.params.id);
+
+        if (!moderator || moderator.role !== 'moderator') {
+            return res.status(404).json({ message: 'Moderator not found' });
+        }
+
+        await User.findByIdAndDelete(req.params.id);  // Delete moderator by ID
+
+        res.json({ message: 'Moderator deleted successfully' });
+    } catch (error) {
+        res.status(500).json({ message: 'Server error', error: error.message });
+    }
+};
+
 module.exports = {
     registerUser,
     authUser,
     getUserProfile,
+    UserApproval,
+    GetModerators,
+    GetSingleModerators,
+    DeleteModerator,
 };

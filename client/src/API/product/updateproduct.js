@@ -1,4 +1,7 @@
-const BASE_URL = 'http://localhost:5000/api';
+const dotenv = require('dotenv');
+dotenv.config();
+
+BASE_URL = process.env.BASE_URL;
 
 // Update an existing product
 export const updateProduct = async (id, productData) => {

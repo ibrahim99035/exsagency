@@ -1,4 +1,7 @@
-const BASE_URL = 'http://localhost:5000/api';
+const dotenv = require('dotenv');
+dotenv.config();
+
+BASE_URL = process.env.BASE_URL;
 
 // Create a new store
 export const createStore = async (storeData) => {
@@ -20,6 +23,3 @@ export const createStore = async (storeData) => {
         throw new Error(error.message);
     }
 };
-
-
-

@@ -9,7 +9,7 @@ const path = require('path');
 // Set up multer for file upload
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
-        const uploadPath = 'uploads/'; // Create this directory in your project
+        const uploadPath = 'uploads/'; 
         cb(null, uploadPath);
     },
     filename: function (req, file, cb) {

@@ -20,6 +20,10 @@ const userSchema = new mongoose.Schema({
         enum: ['admin', 'moderator'],
         default: 'moderator',
     },
+    approval: {
+        type: Boolean,
+        default: false,  
+    },
 }, {
     timestamps: true,
 });

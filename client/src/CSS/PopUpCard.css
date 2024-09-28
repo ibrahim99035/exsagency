@@ -9,7 +9,8 @@
     transition: opacity 1.3s ease, transform 1.3s ease, box-shadow 0.9s ease, transform 0.9s ease;
     width: 400px; /* Fixed width for each card */
     height: 600px;
-    margin-right: 20px; /* Spacing between cards */
+    margin-right: 20px; 
+    cursor: pointer;
     position: relative;
     z-index: 1000;
     text-align: center;
