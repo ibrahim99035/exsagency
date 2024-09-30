@@ -15,11 +15,11 @@ const mallSchema = new mongoose.Schema({
         required: true,
     },
     openingDate: {
-        type: Date,
+        type: String,
         required: true,
     },
     closingDate: {
-        type: Date,
+        type: String,
         required: true,
     },
     coverImage: {

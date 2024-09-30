@@ -3,7 +3,7 @@ import Header from '../components/Layout/Header';
 import Footer from '../components/Layout/Footer';
 import MallSlider from '../components/Sliders/MallSlider'
 import StoreSlider from '../components/Sliders/StoreSlider';
-import CardGrid from '../components/Store/CardGrid';
+import CardGrid from '../components/Product/CardGrid';
 import PartenersSlider from '../components/Sliders/PartenersSlider';
 import PopUpCardGrid from '../components/Other/PopUpCardGrid';
 import HeroSection from '../components/Other/HeroSection';

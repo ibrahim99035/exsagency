@@ -1,7 +1,4 @@
-const dotenv = require('dotenv');
-dotenv.config();
-
-BASE_URL = process.env.BASE_URL;
+const BASE_URL = import.meta.env.VITE_BASE_URL;
 
 // Fetch all stores
 export const fetchStores = async () => {
