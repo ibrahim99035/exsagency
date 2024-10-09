@@ -1,0 +1,46 @@
+.sidebar {
+    width: 250px; /* Width of the sidebar */
+    background-color: #1f1e1e; /* Background color */
+    color: #f2f8fb; /* Text color */
+    height: 100vh; /* Full height minus header height (adjust 60px based on your header height) */
+    position: relative; /* Fix the sidebar */
+    top: 1px; /* Position below the header (adjust if header height changes) */
+    left: 0;
+    display: flex;
+    flex-direction: column; /* Stack the items vertically */
+    padding: 20px; /* Padding inside the sidebar */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5); /* Shadow effect */
+    overflow-y: auto; /* Enable scrolling if content exceeds the sidebar height */
+    z-index: 1000;
+  }
+  
+  .sidebar ul {
+    list-style-type: none; /* Remove default list style */
+    margin: auto;
+    margin-left: 0;
+    padding: 0; /* Remove default padding */
+  }
+  
+  .sidebar li {
+    margin: 15px 0; /* Spacing between items */
+  }
+  
+  .sidebar a {
+    text-decoration: none; /* Remove underline */
+    color: #f2f8fb; /* Link color */
+    display: flex; /* Flexbox for icon and text */
+    align-items: center; /* Center align vertically */
+    transition: background 0.3s, color 0.3s; /* Transition effects */
+    padding: 10px; /* Padding for clickable area */
+    border-radius: 5px; /* Rounded corners */
+  }
+  
+  .sidebar a:hover {
+    background-color: #143d63; /* Change background on hover */
+    color: #ffffff; /* Change text color on hover */
+  }
+  
+  .sidebar a svg {
+    margin-right: 10px; /* Space between icon and text */
+  }
+  

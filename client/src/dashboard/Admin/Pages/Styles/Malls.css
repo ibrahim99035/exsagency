@@ -1,0 +1,51 @@
+/* General styles for the users page */
+.mallspagecontainer{
+    display: flex;
+    position: relative;
+    z-index: 1000;
+}
+  
+.malls-page {
+    padding: 20px; /* Padding around the content */
+    background-color: #f2f8fb; /* Background color for the page */
+    max-height: 100vh; /* Ensure the content takes up full height minus header */
+    width: 100%;
+    overflow: hidden; /* Hide overflow for rounded corners */
+    overflow-x: auto; /* Allow scrolling if content exceeds the height */
+    overflow-y: auto;
+    
+  }
+  
+  /* Styles for the title */
+  .malls-page h2 {
+    color: #143d63; /* Main color for headings */
+    margin-bottom: 20px; /* Space below the title */
+    font-size: 24px; /* Font size for the title */
+  }
+  
+#addmallicon{
+    font-size: 20px;
+    margin: 0;
+    color: #143d63;
+}
+
+#Addcircleiconaddition{
+    cursor: pointer;
+    font-size: 20px;
+    margin: 0;
+    color: #143d63;
+}
+
+#Addcircleiconaddition #Addcircleicon:hover{
+    color: #1e5991;
+}
+  
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .malls-page {
+      margin-left: 0; /* Remove sidebar space on smaller screens */
+      padding: 10px; /* Adjust padding */
+    }
+  }
+  

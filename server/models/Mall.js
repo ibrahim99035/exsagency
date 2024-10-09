@@ -26,6 +26,15 @@ const mallSchema = new mongoose.Schema({
         type: String, // Storing base64-encoded image
         required: true,
     },
+    createdBy: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'User',
+        required: true,
+    },
+    approval: {
+        type: Boolean,
+        default: false,  
+    },
 }, {
     timestamps: true,
 });

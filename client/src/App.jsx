@@ -15,6 +15,12 @@ import HelpCenter from './docs/HelpCenter/HelpCenter';
 import Parteners from './pages/Parteners';
 import Careers from './pages/Careers';
 
+import Dashboard from './dashboard/Admin/components/Dashboard';
+import UsersPage from './dashboard/Admin/Pages/Users';
+import MallsPage from './dashboard/Admin/Pages/Malls';
+import StoresPage from './dashboard/Admin/Pages/Stores';
+import ProductsPage from './dashboard/Admin/Pages/Products';
+
 import { Provider } from 'react-redux';
 import store from './redux/store';
 
@@ -33,6 +39,13 @@ function App() {
                 </>
               }
             />
+
+            <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/dashboard/users" element={<UsersPage />} />
+            <Route path="/dashboard/malls" element={<MallsPage />} />
+            <Route path="/dashboard/stores" element={<StoresPage />} />
+            <Route path="/dashboard/products" element={<ProductsPage />} />
+
             <Route
               path='/auth'
               element = {

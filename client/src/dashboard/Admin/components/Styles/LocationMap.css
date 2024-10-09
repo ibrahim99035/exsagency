@@ -1,0 +1,56 @@
+/* General container for the map */
+.main-map-container{
+    margin-bottom: 20px;
+}
+
+.location-map-container {
+    position: relative;
+    width: 100%;
+    max-width: 600px; /* Set a max-width for larger screens */
+    height: 320px; /* Increased height for the map container */
+    margin: 20px auto;
+    border: 1px solid #ccc; /* Add a subtle border */
+    border-radius: 8px;
+    overflow: hidden; /* Hide overflow of the iframe */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for the map */
+}
+
+/* Button for opening Google Maps */
+.map-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #339266c5;
+    color: white;
+    padding: 12px 16px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+    max-width: 300px;
+    margin: 0 auto; /* Center button horizontally */
+}
+
+.map-button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+.icon {
+    margin-right: 8px; /* Space between the icon and text */
+    font-size: 24px;
+}
+
+.google-icon {
+    color: #DB4437; /* Google red color */
+}
+
+.maps-icon {
+    color: #4285F4; /* Google Maps blue color */
+}
+
+/* Style for the text inside the button */
+.map-button span {
+    font-weight: bold;
+}

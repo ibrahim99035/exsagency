@@ -1,0 +1,141 @@
+.data-table {
+    max-width: 100%; /* Limit the maximum width */
+    margin: 20px 0; /* Add margin for spacing */
+    height: 400px; /* Set a fixed height for the table container */
+    overflow-y: auto; /* Enable vertical scrolling */
+    position: relative; /* Added to help manage positioning */
+}
+  
+table {
+    width: 100%; /* Make the table take the full width of its container */
+    border-collapse: collapse; /* Collapse borders for a cleaner look */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+  
+thead {
+    background-color: #143d63; /* Your primary color */
+    color: #fff; /* White text for better contrast */
+}
+  
+th, td {
+    padding: 12px; /* Add padding for spacing */
+    text-align: left; /* Align text to the left */
+    border-bottom: 1px solid #ddd; /* Add a bottom border for separation */
+}
+  
+tr:hover {
+    background-color: #f2f8fb; /* Light background on row hover */
+}
+
+#tableheading:hover {
+    background-color: #143d63;
+}
+  
+.action-button {
+    background: none; /* Remove default button background */
+    border: none; /* Remove default border */
+    cursor: pointer; /* Change cursor on hover */
+    padding: 8px; /* Add some padding */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+  
+.edit-button:hover {
+    color: #1f1e1e; /* Change color on hover for edit button */
+}
+  
+.delete-button:hover {
+    color: red; /* Change color on hover for delete button */
+}
+
+/* Styles for status flags */
+.status-flag {
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 15px;
+    color: #fff;
+    cursor: pointer;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    margin: auto;
+}
+  
+  .status-flag.active {
+    background-color: rgba(5, 202, 5, 0.774); /* Green for active */
+}
+  
+  .status-flag.inactive {
+    background-color: rgba(255, 0, 0, 0.829); /* Red for inactive */
+}  
+
+/* Styles for the image container */
+.image-container {
+    position: relative;
+    width: 100px; /* Set the width for the image */
+    height: 100px; /* Set the height for the image */
+    overflow: hidden; /* Hide overflow */
+    cursor: pointer;
+}
+  
+/* Styles for the main image */
+.mall-image {
+    width: 100%; /* Image takes full width */
+    height: 100%; /* Image takes full height */
+    object-fit: cover; /* Ensure the image covers the container without distortion */
+    border-radius: 5px; /* Optional: Add some rounding to the corners */
+}
+  
+/* Styles for the hover effect */
+.image-hover {
+    display: none;
+    position: absolute;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.8); /* Change to a darker color for visibility */
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px #0c3c3ce0;
+}
+
+
+/* Show the hover window when hovering */
+.image-container:hover .image-hover {
+    display: block; /* Show the hover window when hovering */
+}
+  
+.image-hover img {
+    max-width: 300px;
+    max-height: 300px;
+    display: block;
+    border-radius: 4px;
+}
+
+.mapicon{
+    font-size: 40px;
+    color: #143d63;
+}
+
+.mapicon:hover{
+    font-size: 45px;
+    color: #0a233a;
+}
+  
+@media (max-width: 768px) {
+    table {
+      display: block; /* Change to block for smaller screens */
+      overflow-x: auto; /* Enable horizontal scrolling */
+    }
+    
+    th, td {
+      display: block; /* Make each cell a block element */
+      text-align: right; /* Align text to the right for readability */
+      padding: 10px 0; /* Adjust padding */
+    }
+    
+    th {
+      text-align: left; /* Keep headers aligned to the left */
+    }
+}
+  
