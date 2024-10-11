@@ -7,9 +7,9 @@
     background-color: #f8f9fa;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    direction: rtl;
+    direction: ltr;
     position: relative;
-    z-index: 1000;
+    z-index: 999;
   }
   
   .faq-title {

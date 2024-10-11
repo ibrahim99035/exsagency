@@ -3,7 +3,7 @@
     color: #fff;
     font-family: 'Roboto', sans-serif;
     position: relative;
-    z-index: 1000;
+    z-index: 999;
   }
   
   .about-us-container p{

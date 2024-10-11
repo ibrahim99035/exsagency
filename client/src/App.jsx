@@ -20,15 +20,20 @@ import UsersPage from './dashboard/Admin/Pages/Users';
 import MallsPage from './dashboard/Admin/Pages/Malls';
 import StoresPage from './dashboard/Admin/Pages/Stores';
 import ProductsPage from './dashboard/Admin/Pages/Products';
+import ApplyNow from './pages/ApplyNow';
+import ServicesPage from './pages/Services';
+import GalleryPage from './pages/GalleryPage';
 
 import { Provider } from 'react-redux';
 import store from './redux/store';
+import SocialMediaColumn from './components/Other/SocialMediaColumn';
 
 function App() {
 
   return (
     <>
       <Provider store={store}>
+      <SocialMediaColumn/>
         <BrowserRouter>
           <Routes>
             <Route
@@ -36,6 +41,24 @@ function App() {
               element = {
                 <>
                   <HomePage />
+                </>
+              }
+            />
+
+            <Route
+              path='/services'
+              element = {
+                <>
+                  <ServicesPage />
+                </>
+              }
+            />
+
+            <Route
+              path='/gallery'
+              element = {
+                <>
+                  <GalleryPage />
                 </>
               }
             />
@@ -131,6 +154,14 @@ function App() {
               element = {
                 <>
                   <Careers />
+                </>
+              }
+            />
+            <Route
+              path='/apply-now'
+              element = {
+                <>
+                  <ApplyNow />
                 </>
               }
             />

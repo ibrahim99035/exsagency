@@ -17,7 +17,7 @@
   text-align: center;
   color: #fff;
   position: relative;
-  z-index: 1000;
+  z-index: 999;
 }
   
   @media (max-width: 668px) {

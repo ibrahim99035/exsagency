@@ -1,0 +1,74 @@
+.service-modal-content {
+    background: white; /* White background for the modal */
+    color: black;
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px; /* Padding around content */
+    max-width: 600px; /* Maximum width */
+    width: 90%; /* Responsive width */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2); /* Soft shadow effect */
+    position: relative; /* Position relative for absolute elements */
+}
+
+.service-modal-content h1{
+    color: black;
+}
+
+.service-modal-content p{
+    color: black;
+    font-size: 10rem;
+    font-weight: bold;
+}
+
+.service-close-btn {
+    background-color: #b8041300; /* Red background */
+    color: rgb(0, 0, 0); /* White text */
+    border: none; /* No border */
+    border-radius: 50%; /* Rounded button */
+    padding: 10px 15px; /* Padding inside the button */
+    cursor: pointer; /* Pointer cursor */
+    transition: background-color 0.3s; /* Smooth transition */
+    position: absolute; /* Position the button at the top right */
+    top: 10px; /* 10px from the top */
+    right: 10px; /* 10px from the right */
+    font-size: 25px;
+}
+
+.service-close-btn:hover {
+    background-color: #ff6b81; /* Lighter red on hover */
+}
+
+.service-modal-content h2 {
+    margin: 0; /* Remove default margin */
+    font-size: 24px; /* Title font size */
+    text-align: center; /* Center align title */
+    margin-bottom: 15px; /* Space below title */
+}
+
+.service-modal-content .modalIcon {
+    display: flex; /* Flex for icon alignment */
+    justify-content: center; /* Center icon */
+    font-size: 70px; /* Larger icon */
+    margin-bottom: 15px; /* Space below icon */
+    color: black;
+    margin-top: 30px;
+}
+
+.service-modal-content p {
+    text-align: center; /* Center align text */
+    font-size: 16px; /* Standard font size */
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .service-modal-content {
+        padding: 15px; /* Less padding on smaller screens */
+    }
+
+    .service-close-btn {
+        padding: 8px 10px; /* Smaller padding for button */
+    }
+
+    .service-modal-content h2 {
+        font-size: 20px; /* Smaller title font size */
+    }
+}

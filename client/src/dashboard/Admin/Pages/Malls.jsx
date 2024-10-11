@@ -20,7 +20,7 @@ import './Styles/Malls.css';
 
 function Malls() {
   const [malls, setMalls] = useState([]);
-  const [selectedMall, setSelectedMall] = useState(null);
+  const [selectedMall, setSelectedMall] = useState(null); 
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isEditModalOpen, setIsEditModalOpen] = useState(false);
   const [isCreateModalOpen, setIsCreateModalOpen] = useState(false);

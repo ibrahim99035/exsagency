@@ -2,15 +2,15 @@
     display: none;
     position: fixed;
     bottom: 20px;
-    right: 20px;
+    right: 50%;
     padding: 10px;
     background-color: var(--dark-color); /* Dark background color */
     color: var(--bg-color); /* Background color for text */
     border: none;
-    border-radius: 15%;
+    border-radius: 46% 54% 54% 46% / 100% 100% 0% 0% ;
     cursor: pointer;
     transition: opacity 0.3s;
-    z-index: 1000;
+    z-index: 999;
 }
   
 .goToTopBtn:hover{

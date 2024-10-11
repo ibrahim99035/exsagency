@@ -1,0 +1,41 @@
+/* ImageGallery.css */
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive grid */
+    gap: 15px; /* Space between images */
+    padding: 20px; /* Padding around the gallery */
+}
+
+.gallery-item {
+    position: relative; /* Positioning context for hover effect */
+    overflow: hidden; /* Hide overflow */
+    border-radius: 8px; /* Rounded corners */
+    transition: transform 0.3s ease; /* Smooth scale effect */
+}
+
+.gallery-item:hover {
+    transform: scale(1.05); /* Scale up on hover */
+}
+
+/* Different sizes for gallery items */
+.gallery-item.small {
+    grid-column: span 1; /* Takes 1 column */
+}
+
+.gallery-item.medium {
+    grid-column: span 2; /* Takes 2 columns */
+}
+
+.gallery-item.large {
+    grid-column: span 2; /* Takes 2 columns */
+    grid-row: span 2; /* Takes 2 rows */
+}
+
+.gallery-image {
+    width: 100%; /* Make images responsive */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Match rounded corners */
+}
+
+

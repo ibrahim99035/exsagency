@@ -1,0 +1,46 @@
+/* SocialMediaColumn.css */
+
+/* The sticky social media column container */
+.social-media-column {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    top: 250px;
+    right: 20px;
+    padding: 10px;
+    color: var(--bg-color); /* Background color for text */
+    border: none;
+    cursor: pointer;
+    transition: opacity 0.3s;
+    z-index: 1000;
+  }
+  
+  /* Icon styling */
+  .icon {
+    font-size: 1.5rem;
+    color: white;
+    background-color: #33333300; /* Default background color */
+    margin-bottom: 15px;
+    transition: background-color 0.3s, transform 0.3s;
+    text-align: center;
+  }
+  
+  
+  /* Mobile Responsiveness */
+  @media (max-width: 768px) {
+    .social-media-column {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      flex-direction: row;
+      justify-content: space-around;
+      width: 100%;
+      padding: 10px 0;
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+  
+    .icon {
+      font-size: 4rem;
+    }
+  }
+  

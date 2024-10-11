@@ -1,0 +1,39 @@
+.apply-container {
+    color: #ffffff !important;
+    padding: 40px; /* Padding for the content */
+    text-align: center; 
+    margin: 50px auto; /* Center the component */
+    position: relative;
+    z-index: 999;
+    width: 100%;
+}
+
+.apply-title {
+    font-size: 28px; /* Title font size */
+    margin-bottom: 20px; /* Space below the title */
+}
+
+.apply-description {
+    font-size: 25px; /* Description font size */
+    line-height: 1.6; /* Line height for readability */
+    margin-bottom: 30px; /* Space below the description */
+    color: white;
+}
+
+.apply-button {
+    background-color: #ffdd57; /* Button background color */
+    color: #333; /* Dark text color for contrast */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 15px 30px; /* Padding for the button */
+    font-size: 18px; /* Font size for the button */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+.apply-button a{
+    color: #333;
+    text-decoration: none;
+}
+.apply-button:hover {
+    background-color: #ffc107; /* Darker shade on hover */
+}

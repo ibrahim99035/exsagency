@@ -1,113 +1,125 @@
-/* Header.css */
-
+/* Main Header Styles */
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    background-color: #24995b;
-    color: white;
-  }
-  
-  .logo img {
-    width: 120px;
-    position: relative;
-    z-index: 1000;
-  }
-  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #030a06;
+  color: white;
+  position: relative;
+  z-index: 1000;
+  direction: ltr;
+}
+
+.logo img {
+  margin-left: 150px;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-around;
+  width: 50%;
+  direction: rtl;
+  position: relative;
+  z-index: 1000;
+}
+
+/* Navigation Menu for Large Screens */
+.nav ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 28px;
+  font-weight: bolder;
+}
+
+/* Mobile Menu Toggle Icon */
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.menu-toggle .bar {
+  width: 30px;
+  height: 3px;
+  background-color: white;
+  transition: all 0.3s ease;
+}
+
+/* Transform hamburger to X when menu is open */
+.menu-toggle.open .bar:nth-child(1) {
+  transform: rotate(45deg) translateY(8px);
+}
+
+.menu-toggle.open .bar:nth-child(2) {
+  opacity: 0; /* Hide the middle bar */
+}
+
+.menu-toggle.open .bar:nth-child(3) {
+  transform: rotate(-45deg) translateY(-8px);
+}
+
+/* Mobile Navigation - Hidden by Default */
+@media (max-width: 768px) {
   .nav {
-    display: flex;
-    justify-content: space-around;
-    width: 50%;
-    direction: rtl;
-    position: relative;
-    z-index: 1000;
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: 100%; /* Below the header */
+    left: 0;
+    right: 0;
+    background-color: #143d63;
+    height: 120VH;
+    padding: 20px;
+    z-index: 999; /* Ensure the nav appears above other elements */
+    width: 100%; /* Full width */
+    box-sizing: border-box; /* Include padding in width */
+    transition: all 0.3s ease; /* Smooth transition */
   }
-  
-  .nav ul {
-    display: flex;
-    list-style: none;
-    gap: 20px;
-  }
-  
-  .nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 28px;
-    font-weight: bolder;
-  }
-  
-  .menu-toggle {
-    display: none;
-    cursor: pointer;
-    flex-direction: column;
-    position: relative;
-    z-index: 1000;
-    gap: 5px;
-  }
-  
-  .menu-toggle .bar {
-    width: 30px;
-    height: 3px;
-    background-color: white;
-    transition: all 0.3s ease;
-  }
-  
+
   .nav.open {
-    display: flex; /* Display the menu when open */
+    display: flex; /* Show the nav when the menu is open */
     flex-direction: column; /* Stack items vertically */
-    align-items: center; /* Center the items horizontally */
+    align-items: center; /* Center items horizontally */
   }
-  
-  .nav.open ul {
-    display: flex; /* Ensure the list items are displayed */
+
+  .nav ul {
     flex-direction: column; /* Stack items vertically */
-    padding: 0; /* Remove default padding */
-    margin: 0; /* Remove default margin */
+    text-align: center;
+    padding: 0;
+    margin: 0;
   }
-  
-  .nav.open ul li {
-    margin-bottom: 15px; /* Space between items */
+
+  .nav ul li {
+    margin-bottom: 15px; /* Space between menu items */
   }
-  
-  .nav.open ul li:last-child {
-    margin-bottom: 0; /* Remove bottom margin from the last item */
+
+  /* Hide the last item’s margin */
+  .nav ul li:last-child {
+    margin-bottom: 0;
   }
-  
+
+  /* Show the Menu Toggle Icon */
+  .menu-toggle {
+    display: flex;
+  }
+
+  /* Animate the Hamburger Icon to an X */
   .menu-toggle.open .bar:nth-child(1) {
     transform: rotate(45deg) translateY(7px);
   }
-  
+
   .menu-toggle.open .bar:nth-child(2) {
     opacity: 0;
   }
-  
+
   .menu-toggle.open .bar:nth-child(3) {
     transform: rotate(-45deg) translateY(-7px);
   }
-  
-  /* Responsive for mobile */
-  @media (max-width: 768px) {
-    .nav {
-      position: absolute;
-      top: 70px;
-      left: 0;
-      right: 0;
-      background-color: #143d63;
-      padding: 20px;
-      display: none; /* Hide the menu by default on mobile */
-    }
-  
-    .nav.open {
-      display: flex; /* Show the menu when open */
-    }
-  
-    .nav ul {
-      flex-direction: column; /* Stack items vertically */
-      text-align: center;
-    }
-  
-    .menu-toggle {
-      display: flex; 
-    }
-  }  
+}

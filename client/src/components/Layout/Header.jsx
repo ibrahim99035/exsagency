@@ -11,15 +11,18 @@ const Header = () => {
   return (
     <header className="header">
       <div className="logo">
-        <img src="/icons/MallStackIconTitled.jpg" alt="Logo" />
+        <img src="/icons/Ex'sLogo.webp" alt="Logo" />
       </div>
       <nav className={`nav ${menuOpen ? 'open' : ''}`}>
         <ul>
-          <li><a href="/">الرئيسية</a></li>
-          <li><a href="/about-us">عنا</a></li>
-          <li><a href="#services">الخدمات</a></li>
-          <li><a href="/contact-us">تواصل معنا</a></li>
-          <li><a href="#about">المعارض</a></li>
+          
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="/contact-us">Contact</a></li>
+          <li><a href="/gallery">Gallery</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="/services">Services</a></li>
+          <li><a href="/about-us">About</a></li>
+          <li><a href="/">Home</a></li>
         </ul>
       </nav>
       <div className="menu-toggle" onClick={toggleMenu}>

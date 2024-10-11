@@ -7,7 +7,7 @@
     transition: transform 0.3s ease;
     cursor: pointer;
     position: relative;
-    z-index: 1000;
+    z-index: 999;
     color: #000;
 }
   

@@ -23,24 +23,12 @@ const HelpCenter = () => {
 
   const faqData = [
     {
-      question: 'هل يمكنني شراء الأثاث مباشرة عبر المنصة؟',
-      answer: 'لا، منصتنا مخصصة لعرض الأثاث والديكورات المنزلية. للحصول على المنتجات، يمكنك التواصل مع المتاجر المدرجة على المنصة مباشرة.',
+      question: 'question 1',
+      answer: 'answer 1',
     },
     {
-      question: 'كيف يمكنني التواصل مع المتاجر أو الموردين؟',
-      answer: 'يمكنك العثور على معلومات التواصل الخاصة بكل متجر أو مورد في صفحة تفاصيل المنتج، بما في ذلك أرقام الهواتف وعناوين البريد الإلكتروني.',
-    },
-    {
-      question: 'هل تقدمون خدمة التوصيل أو التركيب؟',
-      answer: 'نحن لا نقدم خدمات التوصيل أو التركيب. ننصح بالتواصل مع المتاجر لمعرفة إذا كانت تقدم هذه الخدمات.',
-    },
-    {
-      question: 'كيف يمكنني معرفة تفاصيل الأثاث المعروض؟',
-      answer: 'كل قطعة أثاث تحتوي على وصف تفصيلي يشمل المقاسات، المواد المستخدمة، والألوان المتاحة. إذا كنت بحاجة إلى مزيد من المعلومات، يمكنك التواصل مع المتجر مباشرة.',
-    },
-    {
-      question: 'هل يمكنني حجز قطعة أثاث عبر المنصة؟',
-      answer: 'لا تتوفر خدمة الحجز عبر المنصة. نوصي بالتواصل المباشر مع المتجر المعني للاستفسار عن توافر القطع.',
+      question: 'question 2',
+      answer: 'answer 2',
     },
   ];
 
@@ -51,8 +39,8 @@ const HelpCenter = () => {
         <HeroSection />  
         <div className="help-center-container">
             <div className="help-center-header">
-                <h1>مرحبًا بك في مركز المساعدة</h1>
-                <p>هنا يمكنك العثور على إجابات للأسئلة الشائعة أو التواصل مع فريق الدعم الخاص بنا</p>
+                <h1>Welcome in Help Center</h1>
+                <p>Here you could find answers about the frequent questions or you could contact with our support team</p>
             </div>
 
             <div className="help-center-menu">
@@ -60,19 +48,19 @@ const HelpCenter = () => {
                 className={`menu-button ${activeSection === 'faq' ? 'active' : ''}`}
                 onClick={() => handleSectionChange('faq')}
                 >
-                الأسئلة الشائعة
+                FQA
                 </button>
                 <button
                 className={`menu-button ${activeSection === 'support' ? 'active' : ''}`}
                 onClick={() => handleSectionChange('support')}
                 >
-                دعم العملاء
+                  Customer Support
                 </button>
                 <button
                 className={`menu-button ${activeSection === 'inquiry' ? 'active' : ''}`}
                 onClick={() => handleSectionChange('inquiry')}
                 >
-                تقديم استفسار
+                  Submit Inquiry
                 </button>
             </div>
 
@@ -106,33 +94,33 @@ const HelpCenter = () => {
 
                 {activeSection === 'support' && (
                 <div className="support-section">
-                    <h2>دعم العملاء</h2>
-                    <p>إذا كنت بحاجة إلى المساعدة، يمكنك التواصل مع فريق الدعم لدينا عن طريق البريد الإلكتروني أو الهاتف.</p>
+                    <h2>Customer Support</h2>
+                    <p>If you need any help, you can contact with our customer support team by email or phone.</p>
                     <ul>
-                    <li>البريد الإلكتروني: support@example.com</li>
-                    <li>الهاتف: 123-456-7890</li>
+                    <li>Email: support@example.com</li>
+                    <li>Phone: 123-456-7890</li>
                     </ul>
                 </div>
                 )}
 
                 {activeSection === 'inquiry' && (
                 <div className="inquiry-section">
-                    <h2>تقديم استفسار</h2>
-                    <p>إذا كان لديك أي استفسار أو طلب خاص، يمكنك ملء النموذج التالي وسنقوم بالرد عليك في أقرب وقت ممكن.</p>
+                    <h2>Submit Inquiry</h2>
+                    <p>If you have any inquiry, you can fill the form below, and we will reply to you as soon as possible.</p>
                     <form className="inquiry-form">
                     <div className="form-group">
-                        <label>الاسم</label>
-                        <input type="text" placeholder="أدخل اسمك" required />
+                        <label>Name</label>
+                        <input type="text" placeholder="Name" required />
                     </div>
                     <div className="form-group">
-                        <label>البريد الإلكتروني</label>
-                        <input type="email" placeholder="أدخل بريدك الإلكتروني" required />
+                        <label>Email</label>
+                        <input type="email" placeholder="Email" required />
                     </div>
                     <div className="form-group">
-                        <label>الاستفسار</label>
-                        <textarea placeholder="أدخل استفسارك" required></textarea>
+                        <label>Inquiry</label>
+                        <textarea placeholder="Enter Your Inquiry" required></textarea>
                     </div>
-                    <button type="submit" className="submit-button">إرسال الاستفسار</button>
+                    <button type="submit" className="submit-button">Send Inquiry</button>
                     </form>
                 </div>
                 )}

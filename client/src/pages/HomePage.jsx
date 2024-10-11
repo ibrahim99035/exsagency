@@ -1,39 +1,32 @@
 import React from 'react';
 import Header from '../components/Layout/Header';
 import Footer from '../components/Layout/Footer';
-import MallSlider from '../components/Sliders/MallSlider'
-import StoreSlider from '../components/Sliders/StoreSlider';
-import CardGrid from '../components/Product/CardGrid';
-import PartenersSlider from '../components/Sliders/PartenersSlider';
-import PopUpCardGrid from '../components/Other/PopUpCardGrid';
+import MallSlider from '../components/Sliders/MallSlider';
 import HeroSection from '../components/Other/HeroSection';
 import Up from '../components/Other/Up';
-import Logo from '/icons/MallStackTitledCleared.png'
+import ServiceCard from "../components/Other/ServicesComponent";
+import AboutUs from "../components/Other/AboutUsCom"; // Make sure the name matches your component's file
+import ApplyWithUs from "../components/Other/ApplyWithUs";
 
 const HomePage = () => {
-
-    return(
+    return (
         <div>
             <div className="overlay-image"></div>
             <Header />
             <HeroSection />
-            <div id="homelogo">
-                <img src={Logo} alt="MallsLogo" />
-            </div>
-            <h3 id='hometext'>
-                المنصة تجمع كافة معارض الضجيج للأثاث احدث المعروض من مفروشات وإكسسوارات منزلية لديهم ، فقط يتصفح العميل ويختار الموجود والجودة ويتواصل مع المعرض لأي استفسار آخر
-                عن المكان والسعر والمواصفات وإمكانية توافر خدمة التوصيل والتركيب ، كل ذلك وجد لراحة العمل
-            </h3>
+            <ServiceCard />
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" fill="#aa0c0c" id='HeroSvgflip'>
+                <path 
+                d="M0 0v60c9 0 18-3 25-10 13-14 36-14 50 0s36 14 50 0c13-14 36-14 50 0s36 14 50 0c13-14 36-14 50 0s36 14 50 0c13-14 36-14 50 0s36 14 50 0c13-14 36-14 50 0s36 14 50 0c13-14 36-14 50 0s36 14 50 0c13-14 36-14 50 0s36 14 50 0c13-14 36-14 50 0s36 14 50 0c13-14 36-14 50 0s37 13 50 0c14-14 37-14 50 0 7 7 16 10 25 10V0H0Z">
+                </path>
+            </svg>
             <MallSlider />
-            <StoreSlider />
-            <PopUpCardGrid />
-            <CardGrid />
-            <PartenersSlider />
+            <AboutUs />
+            <ApplyWithUs />
             <Up />
             <Footer />
         </div>
     );
-
 };
 
 export default HomePage;

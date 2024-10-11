@@ -1,7 +1,7 @@
 import React from 'react';
 import '../../CSS/Footer.css'; 
 
-import Logo from '/icons/MallStackIconTitled.jpg';
+import Logo from "/icons/Ex'sLogo.webp";
 
 import { FaFacebookSquare } from "react-icons/fa";
 import { FaSquareInstagram } from "react-icons/fa6";
@@ -23,67 +23,56 @@ const Footer = () => {
         </div>
         {/* About Section */}
         <div className="footer-section company-info">
-          <h3>عنا</h3>
+          <h3>About US</h3>
           <p>
-            معارض الضجيج للأثاث منصة تسوق لخدمة
-            المتسوقين واختيار ما يناسب الأذواق من اثاث واكسسوارات منزلية ومعرفة مكانها وأسعارها
-            وامكانية التواصل مع المعرض لأي استفسارات
-          </p>
-          <br />
-          <p>
-            نهدف إلى تلبية احتياجات عملائنا من خلال توفير قطع أثاث فريدة ومتنوعة، تناسب كل الأذواق والمنازل.   
-          </p>
-          <br />
-          <p>
-            المنصة تجمع كافة معارض الضجيج للأثاث احدث المعروض من مفروشات وإكسسوارات منزلية لديهم ، فقط يتصفح العميل ويختار الموجود والجودة ويتواصل مع المعرض لأي استفسار آخر
-            عن المكان والسعر والمواصفات وإمكانية توافر خدمة التوصيل والتركيب ، كل ذلك وجد لراحة العمل
+            Founded in 2021, 
+            <br /><br />EXs Company is a leading creative agency dedicated to helping businesses achieve their full potential. 
+            <br /><br />We offer a comprehensive suite of services designed to elevate your brand and drive results.
           </p>
         </div>
 
         {/* Resources Section */}
         <div className="footer-section">
-          <h3>المصادر</h3>
+          <h3>Resources</h3>
           <ul>
-            <li><a href="/news">الأخبار</a></li> <br />
-            <li><a href="/careers">المهن</a></li> <br />
-            <li><a href="/parteners">الشركاء</a></li> <br />
-            <li><a href="/auth">المدراء و المسؤوؤلين</a></li> <br />
+            <li><a href="/careers">Carrer</a></li> <br />
+            <li><a href="/fqa">Frequent Questions Answered</a></li> <br />
+            <li><a href="/help-center">Support Center</a></li> <br />
           </ul>
         </div>
 
         {/* Support Section */}
         <div className="footer-section">
-          <h3>الدعم</h3>
+          <h3>Support Links</h3>
           <ul>
-            <li><a href="/fqa">الأسئلة الشائعة</a></li> <br />
-            <li><a href="/help-center">مركز المساعدة</a></li> <br />
-            <li><a href="/contact-us">تواصل معنا</a></li> <br />
-            <li><a href="/privacy-policy">سياسة الخصوصية</a></li> <br />
-            <li><a href="/intellectual-property-rights">حقوق الملكية الفكرية</a></li> <br />
-            <li><a href="/terms-and-conditions">شروط الخدمة</a></li> <br />
+            
+            <li><a href="/contact-us">Contact Us</a></li> <br />
+            <li><a href="/privacy-policy">Privcy Policy</a></li> <br />
+            <li><a href="/intellectual-property-rights">Intellectual Property Rights</a></li> <br />
+            <li><a href="/terms-and-conditions">Terms and Conditions</a></li> <br />
           </ul>
         </div>
 
         {/* Social Media Links */}
         <div className="footer-section social">
-          <h3>تابعنا</h3>
+          <h3>Follow Us on Social Media</h3>
           <div className="social-icons">
-            <a href="https://facebook.com" target="_blank" rel="noreferrer" id='facebookIcon'>
+            <a href="https://www.facebook.com/profile.php?id=100086658396302" target="_blank" rel="noreferrer" id='facebookIcon'>
                 <FaFacebookSquare />
             </a>
-            <a href="https://twitter.com" target="_blank" rel="noreferrer" id='twitterIcon'>
+            <a href="https://x.com/exsagency" target="_blank" rel="noreferrer" id='twitterIcon'>
                 <FaSquareXTwitter />
             </a>
-            <a href="https://instagram.com" target="_blank" rel="noreferrer" id='instgramIcon'>
+            <a href="https://www.instagram.com/exscompany/" target="_blank" rel="noreferrer" id='instgramIcon'>
                 <FaSquareInstagram />
             </a>
-            <a href="https://linkedin.com" target="_blank" rel="noreferrer" id='linkedIcon'>
+            <a href="https://www.linkedin.com/in/exs-agency-4ba081286/" target="_blank" rel="noreferrer" id='linkedIcon'>
                 <FaLinkedin />
             </a>
-            <a href="https://youtube.com" target="_blank" rel="noreferrer" id='youtubeIcon'>
+            <a href="https://www.youtube.com/channel/UCFE71Fn_sTy7ujmIwu7U3qQ" target="_blank" rel="noreferrer" id='youtubeIcon'>
                 <FaYoutube />
             </a>
-            <a href="https://tiktok.com" target="_blank" rel="noreferrer" id='tiktokIcon'>
+            <a href="https://www.tiktok.com/@exscompany" target="_blank" rel="noreferrer" id='tiktokIcon'>
                 <AiFillTikTok />
             </a>
             <a href="https://telegram.me" target="_blank" rel="noreferrer" id='telegramIcon'>
@@ -101,9 +90,10 @@ const Footer = () => {
 
       {/* Footer Bottom Section */}
       <div className="footer-bottom">
-        <p>&copy; 2024 معارض الضجيج. كل الحقوق محفوظة.</p>
+        <p id='copyrightparagraph'>&copy; All Rights Reserved for EX's Company 2024</p>
+        <p id='copyrightparagraph'>Made By <a href="https://www.linkedin.com/in/ibrahim-abu-eita-0b2490206/">Ibrahim Abu Eita</a>.</p>
         <p>
-          <a href="/terms-and-conditions">شروط الخدمة</a> | <a href="/privacy-policy">سياسة الخصوصية</a>
+          <a href="/terms-and-conditions">Terms and Condition</a> | <a href="/privacy-policy">Privacy Policy</a>
         </p>
       </div>
     </footer>

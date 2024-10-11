@@ -3,28 +3,28 @@
     max-width: 800px;
     margin: auto;
     padding: 20px;
-    background-color: white; /* Background color */
+    background-color: #aa0c0c; /* Background color */
     box-shadow: 0 0 10px var(--sec-color); /* Shadow for a subtle lift */
     border-radius: 10px;
-    text-align: right; /* Right-to-left text alignment */
     margin-top: 2rem;
     margin-bottom: 2rem;
-    direction: rtl;
     position: relative;
-    z-index: 1000;
+    color: white;
+    z-index: 999;
 }
 
 .terms-and-conditions-container header {
+    color: white;
     margin-bottom: 20px;
 }
 
 .terms-and-conditions-title {
-    color: var(--sec-color); /* Main color for text and accents */
+    color: white;
     font-size: 24px;
 }
 
 .terms-and-conditions-text {
-    color: var(--sec-color); /* Dark background color */
+    color: white;
     font-size: 25px;
     line-height: 1.5;
     text-align: center;
@@ -32,22 +32,23 @@
 
 .terms-and-conditions-container section {
     margin-bottom: 20px;
+    color: white;
 }
 
 .terms-and-conditions-container h1 {
-    color: var(--sec-color); /* Dark background color */
+    color: white; /* Dark background color */
     text-align: center;
 }
 
 .terms-and-conditions-container h2 {
-    color: var(--sec-color); /* Dark background color */
+    color: white;
     font-size: 20px;
     margin-bottom: 10px;
 }
 
 .terms-and-conditions-container p {
     font-size: larger;
-    color: var(--sec-color); /* Dark background color */
+    color: white;
 }
 
 .terms-and-conditions-container footer {

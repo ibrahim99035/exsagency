@@ -2,50 +2,52 @@
     max-width: 800px;
     margin: auto;
     padding: 20px;
-    background-color: white; /* Background color */
+    background-color: #aa0c0c; /* Background color */
     box-shadow: 0 0 10px var(--sec-color); /* Shadow for a subtle lift */
     border-radius: 10px;
-    text-align: right; /* Right-to-left text alignment */
     margin-top: 2rem;
     margin-bottom: 2rem;
-    direction: rtl;
+    direction: ltr;
+    color: white;
     position: relative;
-    z-index: 1000;
+    z-index: 999;
 }
 
 .intellectual-property-rights-container header {
+    color: white;
     margin-bottom: 20px;
 }
 
 .intellectual-property-rights-title {
-    color: var(--main-color); /* Main color for text and accents */
+    color: white; /* Main color for text and accents */
     font-size: 24px;
 }
 
 .intellectual-property-rights-text {
-    color: var(--sec-color); /* Dark background color */
+    color: white;
     font-size: 16px;
     line-height: 1.5;
 }
 
 .intellectual-property-rights-container section {
+    color: white;
     margin-bottom: 20px;
 }
 
 .intellectual-property-rights-container h1 {
-    color: var(--sec-color); /* Dark background color */
+    color: white;
     text-align: center;
 }
 
 .intellectual-property-rights-container h2 {
-    color: var(--sec-color); /* Dark background color */
+    color: white;
     font-size: 20px;
     margin-bottom: 10px;
 }
 
 .intellectual-property-rights-container p {
     font-size: larger;
-    color: var(--sec-color); /* Dark background color */
+    color: white;
 }
 
 .intellectual-property-rights-container footer {

@@ -1,10 +1,10 @@
 /* Define root-level variables for color palette */
 :root {
-  --main-color: #134d2e;  /* Main color for text and accents */
+  --main-color: #1a0541;  /* Main color for text and accents */
   --sec-color: #1f1e1e;   /* Secondary color for highlights */
-  --dark-color: #24995b;  /* Dark background color */
+  --dark-color: #152657;  /* Dark background color */
   --bg-color: #f2f8fb;    /* Background color */
-  --blacker-color: linear-gradient(to top, #ca1533, #24995b);
+  --blacker-color: linear-gradient(to top, #e40e0e, #000000);
 }
 
 /* Global styling for all elements */
@@ -56,12 +56,12 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('/images/floor.png');
+  background-image: url('/images/tile_background.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   z-index: 1;
-  opacity: 0.1; 
+  opacity: 0.45; 
 }
 
 /* Styling for section and footer elements */
@@ -165,4 +165,33 @@ main {
 
 #homelogo img{
   max-width: 200px;
+}
+
+#HeroSvgflip {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  z-index: 999;
+  transform: rotate(180deg); /* Flips the SVG upside down */
+}
+
+#aboutcomHandler{
+  background-color: #f7ac09;
+  width: 100%;
+  height: 100px;
+  position: relative;
+  z-index: 90;
+  margin-top: -115px;
+}
+
+#gallerycomHandler{
+  background-color: #aa0c0c;
+  width: 100%;
+  height: 100px;
+  position: relative;
+  z-index: 90;
+  margin-top: -115px;
 }

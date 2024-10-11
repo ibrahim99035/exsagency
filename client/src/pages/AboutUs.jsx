@@ -5,7 +5,8 @@ import Header from '../components/Layout/Header';
 import HeroSection from '../components/Other/HeroSection';
 import Footer from '../components/Layout/Footer';
 import Up from '../components/Other/Up';
-import TestimonialsSlider from '../components/Sliders/TestimonialsSlider';
+
+import AboutUsC from "../components/Other/AboutUsCom";
 
 const AboutUs = () => {
   return (
@@ -13,59 +14,8 @@ const AboutUs = () => {
       <div className="overlay-image"></div>
       <Header />
       <HeroSection />
-      <div className="about-us-container">
-          <section className="about-us-intro">
-              <h1 className="section-title">عنا</h1>
-              <p className="intro-text">
-                  معارض الضجيج للأثاث منصة متخصصة في عرض و تسويق الأثاث الذي يجمع بين الجودة العالية والتصميم الأنيق و الإكسسورات المنزلية لما يناسب ذوقك.
-              </p>
-              <p className="intro-text">
-                نجمع لكم كافة المعارض و المحلات للأثاث و الإكسسوارات لما يناسب كل الأذواق.
-              </p>
-              <p className="intro-text">
-                نهدف إلى تلبية احتياجات عملائنا من خلال توفير قطع أثاث فريدة ومتنوعة، تناسب كل الأذواق والمنازل.   
-              </p>
-              <p className="intro-text">
-                المنصة تجمع كافة معارض الضجيج للأثاث احدث المعروض من مفروشات وإكسسوارات منزلية لديهم ، فقط يتصفح العميل ويختار الموجود والجودة ويتواصل مع المعرض لأي استفسار آخر
-                عن المكان والسعر والمواصفات وإمكانية توافر خدمة التوصيل والتركيب ، كل ذلك وجد لراحة العمل
-              </p>
-          </section>
-
-          <section className="our-mission-vision">
-              <div className="mission-vision-item">
-                  <h2 className="item-title">مهمتا</h2>
-                  <p className="intro-text">
-                      تقديم قيمة استثنائية وابتكار في كل مشروع نقوم به. ونحن نهدف إلى تجاوز توقعات العملاء من خلال التفاني والتميز.
-                  </p>
-              </div>
-              <div className="mission-vision-item">
-                  <h2 className="item-title">رؤيتنا</h2>
-                  <p className="intro-text">
-                      ضمان راحة و رضا العملاء من خلال الحفاظ على جودة المنتجات و توفير سهولة الوصول لنا.
-                  </p>
-              </div>
-          </section>
-
-          <section className="team-section">
-              <h2 className="section-title">تعرف على فريقنا</h2>
-              <div className="team-container">
-                  {teamMembers.map((member, index) => (
-                      <div className="team-card" key={index}>
-                      <img src={member.image} alt={member.name} className="team-image" />
-                      <div className="team-info">
-                          <h3 className="team-name">{member.name}</h3>
-                          <p className="team-role">{member.role}</p>
-                          <p className="team-bio">{member.bio}</p>
-                      </div>
-                      </div>
-                  ))}
-              </div>
-          </section>
-
-          <section className="testimonials-section">
-              <TestimonialsSlider />
-          </section>
-      </div>
+      <div id="aboutcomHandler">ddddddddd</div>
+      <AboutUsC />
       <Footer />
       <Up />
     </>

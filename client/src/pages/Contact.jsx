@@ -1,7 +1,6 @@
 import React from 'react';
 import '../CSS/Contact.css'; 
-import Logo from '/icons/MallStackTitledCleared.png';
-import TinyLogo from '/icons/MallStackIconTitled.jpg';
+import TinyLogo from "/icons/Ex'sLogo.webp";
 
 import Header from '../components/Layout/Header';
 import Footer from '../components/Layout/Footer';
@@ -23,34 +22,28 @@ const Contact = () => {
     <div>
       <Header />
       <HeroSection />
-      
-      <h1>معارض الضجيج للأثاث - تواصل معنا</h1>
-      <div id="ContactPageLogo">
-        <img src={Logo} alt="Malls Logo" />
-      </div>
       <div className='overlay-image'></div>
       <div className="contact-us">
-        <h2>تواصل معنا</h2>
-        <p>نحب أن نسمع منك, تواصل معنا عبر حساباتنا على وسائل التواصل الاجتماعي, أو أرسل لنا رسالة.</p>
-
+        <h2>Contact Us</h2>
+        <p>We liew to hear from you, contact with us across our social media accounts or send us a message</p>
         <form className="contact-form">
           <div className="social-icons">
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" id='facebookIcon'>
+            <a href="https://www.facebook.com/profile.php?id=100086658396302" target="_blank" rel="noopener noreferrer" id='facebookIcon'>
               <FaFacebookSquare />
             </a>
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" id='twitterIcon'>
+            <a href="https://x.com/exsagency" target="_blank" rel="noopener noreferrer" id='twitterIcon'>
               <FaSquareXTwitter />
             </a>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" id='instgramIcon'>
+            <a href="https://www.instagram.com/exscompany/" target="_blank" rel="noopener noreferrer" id='instgramIcon'>
               <FaSquareInstagram />
             </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" id='linkedIcon'>
+            <a href="https://www.linkedin.com/in/exs-agency-4ba081286/" target="_blank" rel="noopener noreferrer" id='linkedIcon'>
               <FaLinkedin />
             </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" id='youtubeIcon'>
+            <a href="https://www.youtube.com/channel/UCFE71Fn_sTy7ujmIwu7U3qQ" target="_blank" rel="noopener noreferrer" id='youtubeIcon'>
               <FaYoutube />
             </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" id='tiktokIcon'>
+            <a href="https://www.tiktok.com/@exscompany" target="_blank" rel="noopener noreferrer" id='tiktokIcon'>
               <AiFillTikTok />
             </a>
             <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" id='whatsappIcon'>
@@ -63,10 +56,10 @@ const Contact = () => {
               <SiGmail />
             </a>
           </div>
-          <input type="text" placeholder="اسمكك" required />
-          <input type="email" placeholder="بيردك الالكتروني" required />
-          <textarea placeholder="رسالتك" required></textarea>
-          <button type="submit">أرسل الأن !</button>
+          <input type="text" placeholder="Your Name" required />
+          <input type="email" placeholder="Your Email" required />
+          <textarea placeholder="Your Message" required></textarea>
+          <button type="submit">Send Now!</button>
         </form>
       </div>
       <div id="ContactPageLogoTiny">
