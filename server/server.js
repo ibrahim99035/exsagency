@@ -10,9 +10,7 @@ const { notFound } = require('./middleware/notFound');
 
 // Import Routes
 const authRoutes = require('./routes/authRoutes');
-const mallRoutes = require('./routes/mallRoutes');
-const storeRoutes = require('./routes/storeRoutes');
-const productRoutes = require('./routes/productRoutes');
+const applicationRoutes = require('./routes/applicationRoutes');
 
 // Load environment variables
 dotenv.config();
@@ -31,9 +29,7 @@ app.use(morgan('dev')); // HTTP request logger for development
 
 // Routes
 app.use('/api/auth', authRoutes);
-app.use('/api/malls', mallRoutes);
-app.use('/api/stores', storeRoutes);
-app.use('/api/products', productRoutes);
+app.use('/api/records', applicationRoutes);
 
 // Error Handling Middleware
 app.use(notFound);
