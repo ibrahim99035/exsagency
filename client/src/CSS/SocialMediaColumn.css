@@ -29,6 +29,7 @@
   /* Mobile Responsiveness */
   @media (max-width: 768px) {
     .social-media-column {
+        display: none;
       position: fixed;
       bottom: 0;
       left: 0;
