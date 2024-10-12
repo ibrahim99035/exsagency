@@ -7,9 +7,25 @@
     margin: auto;
     position: relative;
     z-index: 999;
-  }
-  
-  .service-card {
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (max-width: 1024px) {
+    .service-container {
+        grid-template-columns: repeat(2, 1fr);
+        width: 90%; /* Adjust width for smaller screens */
+    }
+}
+
+/* Small devices (phones, 600px and up) */
+@media (max-width: 768px) {
+    .service-container {
+        grid-template-columns: 1fr; /* Single column layout for small screens */
+        width: 95%; /* Full width for mobile */
+    }
+}
+
+.service-card {
     background: #771d1d;
     border: 1px solid #a74e4e;
     color: white;
@@ -19,15 +35,27 @@
     transition: transform 0.2s ease;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     cursor: pointer;
-  }
-  
-  .service-card:hover {
+}
+
+.service-card:hover {
     transform: scale(1.05);
-  }
-  
-  .icon {
+}
+
+.icon {
     font-size: 80px;
     color: #007bff; /* Change color as needed */
     margin-bottom: 10px;
-  }
-  
+}
+
+/* Adjust icon size for smaller screens */
+@media (max-width: 768px) {
+    .icon {
+        font-size: 60px;
+    }
+}
+
+@media (max-width: 480px) {
+    .icon {
+        font-size: 50px;
+    }
+}
