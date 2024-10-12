@@ -18,8 +18,7 @@ import Careers from './pages/Careers';
 import Dashboard from './dashboard/Admin/components/Dashboard';
 import UsersPage from './dashboard/Admin/Pages/Users';
 import MallsPage from './dashboard/Admin/Pages/Malls';
-import StoresPage from './dashboard/Admin/Pages/Stores';
-import ProductsPage from './dashboard/Admin/Pages/Products';
+
 import ApplyNow from './pages/ApplyNow';
 import ServicesPage from './pages/Services';
 import GalleryPage from './pages/GalleryPage';
@@ -65,10 +64,7 @@ function App() {
 
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/dashboard/users" element={<UsersPage />} />
-            <Route path="/dashboard/malls" element={<MallsPage />} />
-            <Route path="/dashboard/stores" element={<StoresPage />} />
-            <Route path="/dashboard/products" element={<ProductsPage />} />
-
+            <Route path="/dashboard/apps" element={<MallsPage />} />
             <Route
               path='/auth'
               element = {

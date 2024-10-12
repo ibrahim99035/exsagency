@@ -100,6 +100,7 @@ function Users() {
               onDelete={handleDeleteClick}
               onStatusClick={handleStatusClick}
               onNameClick ={handleNameClick}
+              isUser={true}
             />
           </div>
           

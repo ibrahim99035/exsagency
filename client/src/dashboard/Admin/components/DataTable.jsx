@@ -21,9 +21,8 @@ const CustomDataTable = ({
   onEdit, 
   onDelete, 
   onStatusClick, 
-  onNameClick, 
-  onLocationClick,
-  onImageClick
+  onNameClick,
+  isUser
 }) => {
   return (
     <div className="data-table">
@@ -33,7 +32,7 @@ const CustomDataTable = ({
             {columns.map((col, index) => (
               <th key={index}>{col.headerName}</th> // Display column headers
             ))}
-            <th>Actions</th>
+            {isUser && (<th>Actions</th>)}
           </tr>
         </thead>
         <tbody>
@@ -49,25 +48,6 @@ const CustomDataTable = ({
                     >
                       {rowData.active ? 'Active' : 'Inactive'}
                     </span>
-                  ) : col.field === 'coverImage' ? (
-                    rowData.coverImage ? (
-                      <div className="image-container" >
-                        <img 
-                          src={rowData.coverImage} 
-                          alt={`${rowData.name} Cover`} 
-                          className="mall-image"
-                          onClick={() => onImageClick(rowData)}
-                        />
-                        <div className="image-hover">
-                          <img 
-                            src={rowData.coverImage} 
-                            alt={`${rowData.name} Cover Full`} 
-                          />
-                        </div>
-                      </div>
-                    ) : (
-                      <span>No Image</span>
-                    )
                   ) : col.field === 'role' ? (
                     // Check if it's the role column, display role and icon
                     <div style={{ display: 'flex', alignItems: 'center' }}>
@@ -80,12 +60,8 @@ const CustomDataTable = ({
                     </div>
                   ) : col.field === 'description' ? (
                       truncateText(rowData.description, 10) // Truncate description text
-                  ) : col.field === 'address' ? (
-                      truncateText(rowData.address, 10) // Truncate address text
-                  ) : col.field === 'location' ? (
-                      <span onClick={() => onLocationClick(rowData)} style={{cursor: 'pointer'}}>
-                        <FaMapMarkedAlt className='mapicon'/>
-                      </span>
+                  ) : col.field === '_id' ? (
+                      truncateText(rowData._id, 3) // Truncate description text
                   ) : col.field === 'name' ? (
                       <span 
                         style={{ cursor: 'pointer', color: 'blue' }} 
@@ -93,19 +69,28 @@ const CustomDataTable = ({
                       >
                         {rowData.name}
                       </span>
-                  ) :(
+                  ) : col.field === 'brandName' ? (
+                    <span 
+                      style={{ cursor: 'pointer', color: 'blue' }} 
+                      onClick={() => onNameClick(rowData)} // Call the function when brandName is clicked
+                    >
+                      {rowData.brandName}
+                    </span>
+                ) :(
                     rowData[col.field]
                   )}
                 </td>
               ))}
-              <td>
-                <button onClick={() => onEdit(rowData.id)} className="action-button edit-button">
-                  <FaEdit />
-                </button>
-                <button onClick={() => onDelete(rowData.id)} className="action-button delete-button">
-                  <FaTrashAlt />
-                </button>
-              </td>
+              {isUser && (
+                <td>
+                  <button onClick={() => onEdit(rowData.id)} className="action-button edit-button">
+                    <FaEdit />
+                  </button>
+                  <button onClick={() => onDelete(rowData.id)} className="action-button delete-button">
+                    <FaTrashAlt />
+                  </button>
+                </td>
+              )}      
             </tr>
           ))}
         </tbody>

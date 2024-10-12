@@ -4,10 +4,10 @@ const Application = require('../models/Application');
 exports.createApplication = async (req, res) => {
   try {
     const newApplication = new Application(req.body);
-    const savedForm = await newApplication.save();
-    res.status(201).json(savedForm);
+    const savedApp = await newApplication.save();
+    res.status(201).json(savedApp);
   } catch (err) {
-    res.status(500).json({ message: 'Error creating form', error: err });
+    res.status(500).json({ message: 'Error creating app', error: err });
   }
 };
 
@@ -47,10 +47,10 @@ exports.getApplicationmById = async (req, res) => {
 // Get all Application
 exports.getAllApplication = async (req, res) => {
   try {
-    const applications = await BrandForm.find();
+    const applications = await Application.find({}, 'brandName brandDescription email phone statusFlag'); // Only select specific fields
     res.status(200).json(applications);
-  } catch (err) {
-    res.status(500).json({ message: 'Error fetching forms', error: err });
+  } catch (error) {
+    res.status(500).json({ message: 'Error retrieving applications', error: error.message });
   }
 };
 
