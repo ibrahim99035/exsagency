@@ -22,7 +22,7 @@ const SocialMediaColumn = () => {
       <a href="https://www.instagram.com/exscompany/" target="_blank" rel="noopener noreferrer">
         <FaSquareInstagram className="icon instagram" />
       </a>
-      <a href="https://www.linkedin.com/in/exs-agency-4ba081286/" target="_blank" rel="noopener noreferrer">
+      <a href="https://www.linkedin.com/company/exs-company/posts/?feedView=all" target="_blank" rel="noopener noreferrer">
         <FaLinkedin className="icon linkedin" />
       </a>
       <a href="https://www.youtube.com/channel/UCFE71Fn_sTy7ujmIwu7U3qQ" target="_blank" rel="noopener noreferrer">

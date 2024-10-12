@@ -37,7 +37,7 @@ const Contact = () => {
             <a href="https://www.instagram.com/exscompany/" target="_blank" rel="noopener noreferrer" id='instgramIcon'>
               <FaSquareInstagram />
             </a>
-            <a href="https://www.linkedin.com/in/exs-agency-4ba081286/" target="_blank" rel="noopener noreferrer" id='linkedIcon'>
+            <a href="https://www.linkedin.com/company/exs-company/posts/?feedView=all" target="_blank" rel="noopener noreferrer" id='linkedIcon'>
               <FaLinkedin />
             </a>
             <a href="https://www.youtube.com/channel/UCFE71Fn_sTy7ujmIwu7U3qQ" target="_blank" rel="noopener noreferrer" id='youtubeIcon'>
@@ -46,10 +46,10 @@ const Contact = () => {
             <a href="https://www.tiktok.com/@exscompany" target="_blank" rel="noopener noreferrer" id='tiktokIcon'>
               <AiFillTikTok />
             </a>
-            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" id='whatsappIcon'>
+            <a href="https://api.whatsapp.com/send?phone=01558787856" target="_blank" rel="noopener noreferrer" id='whatsappIcon'>
               <FaSquareWhatsapp />
             </a>
-            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" id='telegramIcon'>
+            <a href="https://t.me/Exscomp" target="_blank" rel="noopener noreferrer" id='telegramIcon'>
               <FaTelegramPlane />
             </a>
             <a href="mailto:contact@example.com" target="_blank" rel="noopener noreferrer" id='gmailIcon'>
