@@ -18,7 +18,7 @@
   
   /* Styles for the title */
   .malls-page h2 {
-    color: #143d63; /* Main color for headings */
+    color: #110429; /* Main color for headings */
     margin-bottom: 20px; /* Space below the title */
     font-size: 24px; /* Font size for the title */
   }
@@ -41,11 +41,67 @@
 }
   
   
+ /* General styles for the users page */
+.userspagecontainer{
+    display: flex;
+    position: relative;
+    z-index: 1000;
+}
+  
+  .user-form-container {
+    flex-shrink: 0; /* Form should not shrink when table grows */
+  }
+  
+
+.users-page {
+    padding: 20px; /* Padding around the content */
+    background-color: #f2f8fb; /* Background color for the page */
+    max-height: 100vh; /* Ensure the content takes up full height minus header */
+    width: 100%;
+    overflow: hidden; /* Hide overflow for rounded corners */
+    overflow-x: auto; /* Allow scrolling if content exceeds the height */
+    overflow-y: auto;
+    
+  }
+  
+  /* Styles for the title */
+  .users-page h2 {
+    color: #143d63; /* Main color for headings */
+    margin-bottom: 20px; /* Space below the title */
+    font-size: 24px; /* Font size for the title */
+  }
+  
+  /* DataTable styling */
+  .data-table {
+    background-color: #fff; /* White background for the table */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    overflow: hidden; /* Hide overflow for rounded corners */
+    overflow-x: auto; /* Allow scrolling if content exceeds the height */
+    overflow-y: auto;
+  }
+  
+  /* UserForm styles (if needed) */
+  .user-form {
+    margin-top: 20px; /* Space above the form */
+    background-color: #ffffff; /* White background */
+    padding: 20px; /* Padding inside the form */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  }
+  
   /* Responsive styles */
   @media (max-width: 768px) {
-    .malls-page {
+    .mallspagecontainer{
+      flex-direction: column;
+    }
+    .users-page {
       margin-left: 0; /* Remove sidebar space on smaller screens */
       padding: 10px; /* Adjust padding */
+    }
+  
+    .user-form {
+      padding: 15px; /* Adjust padding */
     }
   }
   

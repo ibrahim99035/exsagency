@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FaUsers, FaStore, FaShoppingBag, FaBuilding } from 'react-icons/fa';
+import { FaUsers } from 'react-icons/fa';
+import { BsFillMenuAppFill } from "react-icons/bs";
 import './Styles/sidebar.css';
 
 const Sidebar = () => {
@@ -8,7 +9,7 @@ const Sidebar = () => {
     <div className="sidebar">
       <ul>
         <li><Link to="/dashboard/users"><FaUsers /> Users</Link></li>
-        <li><Link to="/dashboard/malls"><FaBuilding /> Applications</Link></li>
+        <li><Link to="/dashboard/apps"><BsFillMenuAppFill /> Applications</Link></li>
       </ul>
     </div>
   );

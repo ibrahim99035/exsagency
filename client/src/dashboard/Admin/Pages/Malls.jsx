@@ -1,7 +1,6 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 import DataTable from '../components/DataTable';
-import { getMalls, deleteMall } from '../services/mallService';
 
 import { updateApplicationStatus, getApplicationById, getAllApplications, getApplicationsByStatus} from '../../../API/Applications/endpoints';
 
@@ -55,6 +54,10 @@ function Malls() {
     setIsDataModalOpen(true); // Open the modal to display the mall information
   };
 
+  const reloadPage = () => {
+    window.location.reload();
+  };
+
   const columns = [
     { field: '_id', headerName: 'ID', width: 100 },
     { field: 'brandName', headerName: 'Brand Name', width: 200 },
@@ -87,24 +90,26 @@ function Malls() {
         </div>
 
       {/* Mall Profile Modal */}
-      <CustomModal
-        isOpen={isDataModalOpen}
-        onClose={() => setIsDataModalOpen(false)} // Close the edit modal
-        content={(
-          <MallInfo 
-            application={selectedMall}
-            onStatusClick={handleStatusClick}
-          />
-        )}
-      />
+      {isDataModalOpen && 
+        <CustomModal
+          isOpen={isDataModalOpen}
+          onClose={() => setIsDataModalOpen(false)} // Close the edit modal
+          content={(
+            <MallInfo 
+              application={selectedMall}
+              onStatusClick={handleStatusClick}
+            />
+          )}
+        />
+      }
 
       {/* Status Confirmation Modal */}
       <StatusConfirmModal
         isOpen={isStatusModalOpen}
-        onClose={() => setIsStatusModalOpen(false)} // Close the status modal
+        onClose={() => setIsStatusModalOpen(false) && reloadPage} // Close the status modal
         onConfirm={handleConfirmStatusChange}      // Confirm status change
         object={selectedMall}                        // Pass the selected user
-        objecttype = 'mall'
+        objecttype = 'apps'
       />
 
       <Footer />

@@ -22,15 +22,16 @@ export const createApplication = async (applicationData) => {
 };
 
 // Update the status of an application by ID
-export const updateApplicationStatus = async (applicationId, status) => {
+export const updateApplicationStatus = async (applicationId, newStatus) => {
     try {
         const response = await fetch(`${BASE_URL}/records/applications/status/${applicationId}`, {
             method: 'PATCH',
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify({ status }),
+            body: JSON.stringify({ newStatus }),
         });
+        console.log(`This is endpoint fetchcall - ${newStatus}`)
         const data = await response.json();
         if (!response.ok) {
             throw new Error(data.message || 'Error updating application status');

@@ -1,6 +1,6 @@
 .sidebar {
     width: 250px; /* Width of the sidebar */
-    background-color: #1f1e1e; /* Background color */
+    background-color: #110429; /* Background color */
     color: #f2f8fb; /* Text color */
     height: 100vh; /* Full height minus header height (adjust 60px based on your header height) */
     position: relative; /* Fix the sidebar */
@@ -44,3 +44,43 @@
     margin-right: 10px; /* Space between icon and text */
   }
   
+
+  /* Responsive Styles for Mobile */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%; /* Full width on mobile */
+    height: 70px; /* Not fixed height */
+    position: relative; /* No longer sticky */
+    top: 0;
+    left: 0;
+    flex-direction: row; /* Change to horizontal layout */
+    justify-content: center; /* Evenly distribute items */
+    padding: 10px; /* Less padding on mobile */
+    box-shadow: none; /* Remove shadow on mobile */
+    margin-top: -45px;
+  }
+
+  .sidebar ul {
+    display: flex; /* Make the list items horizontal */
+    flex-direction: row; /* Arrange items in a row */
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .sidebar li {
+    margin: 0; /* Remove vertical margins */
+  }
+
+  .sidebar a {
+    padding: 8px 5px; /* Adjust padding for mobile */
+    font-size: 20px; /* Reduce text size */
+    margin-left: 10px;
+  }
+
+  .sidebar a svg {
+    margin-right: 5px; /* Adjust icon spacing */
+  }
+}

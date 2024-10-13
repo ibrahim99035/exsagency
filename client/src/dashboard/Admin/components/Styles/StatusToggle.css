@@ -1,0 +1,56 @@
+/* Container for the toggle */
+.status-toggle-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  
+  /* Toggle circle styling */
+  .status-toggle-circle {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.4s ease-in-out, transform 0.2s ease;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Status-specific colors */
+  .status-toggle-circle.pending {
+    background-color: #f0ad4e; /* Orange for Pending */
+  }
+  
+  .status-toggle-circle.approved {
+    background-color: #5cb85c; /* Green for Approved */
+  }
+  
+  .status-toggle-circle.rejected {
+    background-color: #d9534f; /* Red for Rejected */
+  }
+  
+  /* Hover effect */
+  .status-toggle-circle:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Status label */
+  .status-label {
+    text-transform: capitalize;
+  }
+  
+  /* Mobile responsiveness */
+  @media (max-width: 768px) {
+    .status-toggle-circle {
+      width: 100px;
+      height: 100px;
+      font-size: 16px;
+    }
+  }
+  

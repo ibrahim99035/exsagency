@@ -2,13 +2,18 @@ import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import './Styles/MallInfo.css'; 
 import { getApplicationById } from '../../../API/Applications/endpoints';
+import useSharedData from './useSharedData';
 
 const ApplicationInfo = ({ application, onStatusClick }) => {
   const [applicationDetails, setApplicationDetails] = useState(null); // Use null instead of an array
+  const { Flag } = useSharedData();
+
 
   useEffect(() => {
     fetchApplication();
   }, [application]); // Fetch data when the application prop changes
+
+  if(Flag){fetchApplication();};
 
   const fetchApplication = async () => {
     try {
@@ -73,7 +78,7 @@ const ApplicationInfo = ({ application, onStatusClick }) => {
           <h3>Notes</h3>
           <p>{applicationDetails.notes}</p>
         </div>
-      </div>
+      </div> <br /> <br />
 
       <button className="status-button" onClick={() => onStatusClick(applicationDetails)}>Change Status</button>
     </div>

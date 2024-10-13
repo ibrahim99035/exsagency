@@ -76,3 +76,14 @@
     border-radius: 5px; /* Rounded corners for items */
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); /* Optional shadow for items */
   }  
+
+  @media (max-width: 768px) {
+    .application-info{
+      overflow-y: auto;
+      overflow-x: auto;
+      width: auto;
+    }
+    .info-grid{
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }

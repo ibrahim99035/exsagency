@@ -14,7 +14,8 @@ exports.createApplication = async (req, res) => {
 // Update status of a Application
 exports.updateStatus = async (req, res) => {
   const { id } = req.params;
-  const { statusFlag } = req.body;
+  const { newStatus } = req.body;
+  let statusFlag = newStatus;
   try {
     const updatedForm = await Application.findByIdAndUpdate(
       id,
@@ -24,7 +25,9 @@ exports.updateStatus = async (req, res) => {
     if (!updatedForm) {
       return res.status(404).json({ message: 'Form not found' });
     }
-    res.status(200).json(updatedForm);
+    let messsage = `${statusFlag} status is added`;
+    console.log(messsage);
+    res.status(200).json({message: messsage, updatedForm});
   } catch (err) {
     res.status(500).json({ message: 'Error updating status', error: err });
   }

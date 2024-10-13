@@ -62,3 +62,27 @@
     max-height: 70vh;
     border-radius: 8px;
 }
+
+@media (max-width: 768px) {
+  /* Make modal take up more space on smaller screens */
+  .modal-content {
+    width: 90%; /* Almost full width on mobile */
+  }
+
+  /* Adjust buttons to stack vertically on small screens */
+  .modal-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Full width buttons on mobile */
+  .confirm-btn, .close-btn, .cancelstat, .cancel-btn, .confirm-status {
+    width: 100%;
+    margin-bottom: 10px; /* Add space between buttons */
+  }
+
+  #editmodal {
+    width: 100%;
+    padding: 10px;
+  }
+}
