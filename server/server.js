@@ -31,7 +31,7 @@ app.use(morgan('dev')); // HTTP request logger for development
 app.use('/api/auth', authRoutes);
 app.use('/api/records', applicationRoutes);
 app.get('/', async (req, res)=>{
-    res.status(200).json({message: "<h1>Welcom TO EX's Server</h1>"});
+    res.status(200).json({message: "<h1>Welcom TO EX's Server</h1>"}); 
 })
 
 // Error Handling Middleware
