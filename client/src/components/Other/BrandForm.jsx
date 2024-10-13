@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import '../../CSS/BrandForm.css';
+import { createApplication } from '../../API/Applications/endpoints';
+import Loading from './Loading';
 
 import { 
   FaFacebook,
@@ -48,6 +50,9 @@ const BrandForm = () => {
   });
 
   const [disabledPlatforms, setDisabledPlatforms] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState(false);
+  const [failure, setFailure] = useState(false);
 
   const socialMediaOptions = [
     { name: 'Facebook', icon: <FaFacebook />, color: '#1877F2' },
@@ -91,7 +96,6 @@ const BrandForm = () => {
       }));
     }
   };
-  
 
   const removePlatform = (platformName) => {
     setFormData((prevData) => ({
@@ -169,9 +173,22 @@ const BrandForm = () => {
     setFormData({ ...formData, competitors: [...formData.competitors, ''] });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true);
     console.log(formData); // log form data
+    try{
+      const result = await createApplication(formData);
+      console.log('Status updated successfully:', result);
+      setLoading(false);
+      setSuccess(true);
+      setFailure(false);
+    }catch(err){
+      setLoading(false);
+      setSuccess(false);
+      setFailure(true);
+      console.error('Failed to Apply: ', error);
+    }
   };
 
   return (
@@ -590,9 +607,22 @@ const BrandForm = () => {
         ></textarea>
       </div>
 
-      <button className="submit-button" type="submit">
+      <button className="submit-button" type="submit" disabled={loading}>
         Submit
       </button>
+      {loading && <Loading />}
+      {success && <p id='successMessage'>Application had been added successfully! 😊</p>}
+      {failure && (
+        <div id='failContainer'>
+          <p id="failMessage" className="error-message">
+            Failed to add your application 😢. <br /> 
+            Please try again later or contact our Support Team at: 
+          </p> 
+          <a href="/help-center" target="_blank" rel="noopener noreferrer" className="help-link">
+            Help Center
+          </a>
+        </div>
+      )}
     </form>
   );
 };
