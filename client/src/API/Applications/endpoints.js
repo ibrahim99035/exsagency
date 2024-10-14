@@ -1,4 +1,5 @@
-const BASE_URL = import.meta.env.VITE_BASE_URL;
+// const BASE_URL = import.meta.env.VITE_BASE_URL;
+const BASE_URL = "https://companysa.onrender.com/api";
 
 // Create a new application
 export const createApplication = async (applicationData) => {
