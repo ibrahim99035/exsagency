@@ -122,21 +122,51 @@
 @keyframes bounce {
   0% {
     transform: translateY(0);
+    animation-timing-function: ease-in;
   }
-  50%{
+  20% {
+    transform: translateY(-60px);
+    animation-timing-function: ease-out;
+  }
+  40% {
+    transform: translateY(-30px);
+    animation-timing-function: ease-in;
+  }
+  60% {
+    transform: translateY(-45px);
+    animation-timing-function: ease-out;
+  }
+  80% {
+    transform: translateY(-15px);
+    animation-timing-function: ease-in;
+  }
+  100% {
+    transform: translateY(0);
+    animation-timing-function: ease-out;
+  }
+}
+
+@keyframes smoothBounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  25% {
     transform: translateY(-50px);
   }
-  100%{
+  50% {
     transform: translateY(0);
+  }
+  75% {
+    transform: translateY(25px);
   }
 }
 
 .hero-logo {
   display: inline-block;
-  animation: bounce 2s infinite; /* Duration and infinite loop */
+  animation: smoothBounce 3s cubic-bezier(0.25, 1, 0.5, 1) infinite;
 }
 
 #Exlogocont{
   padding: 20px;
-  animation: bounce 2s infinite; 
+  animation: smoothBounce 3s cubic-bezier(0.25, 1, 0.5, 1) infinite;
 }

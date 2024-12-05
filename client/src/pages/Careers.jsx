@@ -70,7 +70,7 @@ const Careers = () => {
     <>
       <div className="overlay-image"></div>
       <Header />
-      <HeroSection />
+      {/* <HeroSection /> */}
       <section id="careers">
         <div className="container">
           <h2>Job Offers</h2>

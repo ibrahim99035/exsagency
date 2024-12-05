@@ -12,7 +12,7 @@ const Auth = () =>{
         <div>
             <div className="overlay-image"></div>
             <Header />
-            <HeroSection />
+            {/* <HeroSection /> */}
             <Login />
             <PartenersSlider />
             <Up />

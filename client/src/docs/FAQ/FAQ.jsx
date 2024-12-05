@@ -29,7 +29,7 @@ const FAQ = () => {
     <>
       <div className='overlay-image'></div>
       <Header />
-      <HeroSection />   
+      {/* <HeroSection />    */}
       <div className="faq-container">
         <h2 className="faq-title">FQA</h2>
         <div className="faq-items">

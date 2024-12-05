@@ -12,7 +12,7 @@ const IntellectualPropertyRights = () => {
     <>
       <div className='overlay-image'></div>
       <Header />
-      <HeroSection />
+      {/* <HeroSection /> */}
       <Up />
       <div className="intellectual-property-rights-container">
         <header>

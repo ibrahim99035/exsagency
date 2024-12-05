@@ -13,7 +13,7 @@ const TermsAndConditions = () => {
     <>
       <div className='overlay-image'></div>
       <Header />
-      <HeroSection />
+      {/* <HeroSection /> */}
       <Up />
       <div className="terms-and-conditions-container">
         <header>

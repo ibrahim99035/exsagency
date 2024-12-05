@@ -12,7 +12,7 @@ const PrivacyPolicy = () => {
     <>
       <div className='overlay-image'></div>
       <Header />
-      <HeroSection />
+      {/* <HeroSection /> */}
       <Up />
       <div className="privacy-policy-container">
         <header>

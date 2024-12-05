@@ -21,7 +21,7 @@ const Contact = () => {
   return (
     <div>
       <Header />
-      <HeroSection />
+      {/* <HeroSection /> */}
       <div className='overlay-image'></div>
       <div className="contact-us">
         <h2>Contact Us</h2>

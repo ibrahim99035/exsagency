@@ -1,6 +1,6 @@
 import React from 'react';
 import '../../CSS/HeroSection.css';
-import Logo from "/icons/ExesLogoLatge.webp"
+import Logo from "/icons/EXsLogoAnimation.png"
 
 const HeroSection = () => {
   return (

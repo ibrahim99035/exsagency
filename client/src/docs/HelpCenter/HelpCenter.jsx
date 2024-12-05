@@ -36,7 +36,7 @@ const HelpCenter = () => {
     <>
         <div className="overlay-image"></div>
         <Header />
-        <HeroSection />  
+        {/* <HeroSection />   */}
         <div className="help-center-container">
             <div className="help-center-header">
                 <h1>Welcome in Help Center</h1>

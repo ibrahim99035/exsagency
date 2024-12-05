@@ -12,7 +12,7 @@ const Services = () => {
     <>
       <div className="overlay-image"></div>
       <Header />
-      <HeroSection />
+      {/* <HeroSection /> */}
       <ServiceCard />
       <Footer />
       <Up />

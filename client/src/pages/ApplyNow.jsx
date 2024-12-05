@@ -12,7 +12,7 @@ const ApplyNow = () =>{
         <div>
             <div className="overlay-image"></div>
             <Header />
-            <HeroSection />
+            {/* <HeroSection /> */}
             <BrandForm />
             <Up />
             <SocialMediaColumn/>

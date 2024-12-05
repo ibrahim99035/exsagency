@@ -12,7 +12,7 @@ const GalleryPage = () => {
     <>
       <div className="overlay-image"></div>
       <Header />
-      <HeroSection />
+      {/* <HeroSection /> */}
       <div id="gallerycomHandler">ddddddddd</div>
       <GalleryComponent />
       <Footer />

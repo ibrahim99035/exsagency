@@ -13,7 +13,7 @@ const AboutUs = () => {
     <>
       <div className="overlay-image"></div>
       <Header />
-      <HeroSection />
+      {/* <HeroSection /> */}
       <div id="aboutcomHandler">ddddddddd</div>
       <AboutUsC />
       <Footer />
