@@ -1,10 +1,10 @@
 /* Define root-level variables for color palette */
 :root {
-  --main-color: #1a0541;  /* Main color for text and accents */
+  --main-color: #ff6444;  /* Main color for text and accents */
   --sec-color: #1f1e1e;   /* Secondary color for highlights */
   --dark-color: #152657;  /* Dark background color */
   --bg-color: #f2f8fb;    /* Background color */
-  --blacker-color: linear-gradient(to top, #e40e0e, #000000);
+  --blacker-color: linear-gradient(to top, #ff6444, #000000);
 }
 
 /* Global styling for all elements */

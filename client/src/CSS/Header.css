@@ -38,6 +38,25 @@
   font-weight: bolder;
 }
 
+/* Language Toggle */
+.language-toggle {
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  color: white;
+  background-color: transparent;
+  border: 2px solid white;
+  padding: 5px 15px;
+  border-radius: 20px;
+  margin-right: 150px; /* Adjust based on the layout */
+  transition: all 0.3s ease;
+}
+
+.language-toggle:hover {
+  background-color: white;
+  color: #030a06;
+}
+
 /* Mobile Menu Toggle Icon */
 .menu-toggle {
   display: none;
