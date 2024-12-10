@@ -3,7 +3,7 @@ import '../../CSS/Header.css';
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [language, setLanguage] = useState('EN'); // Initial language state
+  const [language, setLanguage] = useState('ِ'); // Initial language state
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);

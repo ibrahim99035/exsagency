@@ -32,7 +32,6 @@ function App() {
   return (
     <>
       <Provider store={store}>
-      <SocialMediaColumn/>
         <BrowserRouter>
           <Routes>
             <Route
