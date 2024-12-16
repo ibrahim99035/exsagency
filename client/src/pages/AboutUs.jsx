@@ -6,7 +6,7 @@ import HeroSection from '../components/Other/HeroSection';
 import Footer from '../components/Layout/Footer';
 import Up from '../components/Other/Up';
 
-import AboutUsC from "../components/Other/AboutUsCom";
+import AboutUsC from "../components/Other/AboutUsLarge";
 
 const AboutUs = () => {
   return (

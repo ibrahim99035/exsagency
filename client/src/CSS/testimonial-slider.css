@@ -1,0 +1,61 @@
+.testimonial-slider-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 20px;
+    text-align: center;
+  }
+  
+  .testimonial-slider-container h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #333;
+  }
+  
+  .testimonial-slider {
+    margin: 20px 0;
+  }
+  
+  .testimonial-slide {
+    padding: 20px;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between; /* Ensures proper spacing */
+    height: 250px; /* Fixed height for consistency */
+    max-width: 300px; /* Fixed width for all cards */
+    margin: 0 auto; /* Center-align the card in the slide */
+  }
+  
+  .testimonial-slide img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    border: 3px solid #ff6444;
+  }
+  
+  .testimonial-slide p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+    margin: 10px 0; /* Consistent spacing for text */
+    flex-grow: 1; /* Ensures text takes available space and aligns content */
+  }
+  
+  .testimonial-slide h4 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  /* Ensure all slides have equal height across screen sizes */
+  .testimonial-slider .slick-slide {
+    display: flex;
+    justify-content: center; /* Center slides horizontally */
+    align-items: center; /* Center slides vertically */
+  }  

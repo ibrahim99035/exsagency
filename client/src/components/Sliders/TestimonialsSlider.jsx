@@ -1,66 +1,91 @@
 import React from "react";
 import Slider from "react-slick";
-import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import '../../CSS/slider.css';
+import "../../CSS/testimonial-slider.css";
 
-const TestimonialsSlider = () => {
-  const settings = {
-    dots: true,
+const TestimonialSlider = () => {
+  const settingsTop = {
+    dots: false,
     infinite: true,
-    speed: 500,
-    slidesToShow: 3, // Number of slides visible at once
-    slidesToScroll: 1, // Number of slides to scroll at once
-    autoplay: true, // Autoplay the slides
-    autoplaySpeed: 2000, // Speed of autoplay (in ms)
-    pauseOnHover: true, // Pause when hovering
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-        },
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
+    speed: 3000,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 0,
+    cssEase: "linear",
+    pauseOnHover: false,
+  };
+
+  const settingsBottom = {
+    dots: false,
+    infinite: true,
+    speed: 3000,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 0,
+    cssEase: "linear",
+    pauseOnHover: false,
+    rtl: true, // Makes the bottom slider move in the opposite direction
   };
 
   const testimonials = [
     {
-      text: 'لقد تجاوزت الشركة جميع توقعاتنا. تفانيهم وخبراتهم لا مثيل لهما.',
-      author: 'أمل محمد، الرئيس التنفيذي لشركة XYZ',
+      id: 1,
+      name: "John Doe",
+      feedback: "This is the best service I've ever used! Highly recommended.",
+      image: "/images/testimonials/user1.jpg",
     },
     {
-      text: 'نحن متحمسون للنتائج. كان الفريق محترفاً وسلم في الوقت المحدد.',
-      author: 'حسن علي، مدير في شركة ABC',
+      id: 2,
+      name: "Jane Smith",
+      feedback: "Exceptional quality and great support. Five stars!",
+      image: "/images/testimonials/user2.jpg",
     },
     {
-      text: 'خدمة ودعم رائع. أوصي بشدة لأي احتياجات تجارية.',
-      author: 'سارة حسين، مؤسسة شركة DEF',
+      id: 3,
+      name: "Emily Johnson",
+      feedback: "I love it! This made my life so much easier.",
+      image: "/images/testimonials/user3.jpg",
+    },
+    {
+      id: 4,
+      name: "Michael Brown",
+      feedback: "Amazing experience. I will definitely use this again.",
+      image: "/images/testimonials/user4.jpg",
+    },
+    {
+      id: 5,
+      name: "Sarah Davis",
+      feedback: "Great value for money and a fantastic team!",
+      image: "/images/testimonials/user5.jpg",
     },
   ];
 
   return (
-    <div className="slider-container" id="testimonial">
-      <h2 className="slider-title">ماذا يقول الناس عنا</h2>
-      <Slider {...settings}>
-        {testimonials.map((testimonial, index) => (
-          <div className="testimonial-slide" key={index}>
-            <p className="testimonial-text">"{testimonial.text}"</p>
-            <p className="testimonial-author">- {testimonial.author}</p>
+    <div className="testimonial-slider-container">
+      <h2>What Our Clients Say</h2>
+      {/* Top Slider */}
+      <Slider {...settingsTop} className="testimonial-slider">
+        {testimonials.map((testimonial) => (
+          <div key={testimonial.id} className="testimonial-slide">
+            <p>{testimonial.feedback}</p>
+            <h4>{testimonial.name}</h4>
           </div>
         ))}
       </Slider>
-      <a href="#get-started" className="slider-button">المزيد</a>
+      {/* Bottom Slider */}
+      <Slider {...settingsBottom} className="testimonial-slider">
+        {testimonials.map((testimonial) => (
+          <div key={testimonial.id} className="testimonial-slide">
+            <p>{testimonial.feedback}</p>
+            <h4>{testimonial.name}</h4>
+          </div>
+        ))}
+      </Slider>
     </div>
   );
 };
 
-export default TestimonialsSlider;
+export default TestimonialSlider;

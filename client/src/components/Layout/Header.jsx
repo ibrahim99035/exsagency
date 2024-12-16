@@ -1,33 +1,54 @@
 import React, { useState } from 'react';
+import { useLocation } from 'react-router-dom'; // To track the current route
+import { FaFacebook, FaInstagram, FaTwitter } from 'react-icons/fa'; // Social Media Icons
 import '../../CSS/Header.css';
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [language, setLanguage] = useState('ِ'); // Initial language state
+  const [language, setLanguage] = useState('EN');
+  const location = useLocation(); // Get current route
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
 
   const toggleLanguage = () => {
-    setLanguage((prevLang) => (prevLang === 'EN' ? 'AR' : 'EN')); // Toggle between EN and AR
+    setLanguage((prevLang) => (prevLang === 'EN' ? 'AR' : 'EN'));
   };
+
+  const navItems = [
+    { name: 'Home', path: '/' },
+    { name: 'About', path: '/about-us' },
+    { name: 'Services', path: '/services' },
+    { name: 'Gallery', path: '/gallery' },
+    { name: 'Portfolio', path: '#portfolio' },
+    { name: 'Contact', path: '/contact-us' },
+    { name: 'Blog', path: '#blog' },
+  ];
+  
 
   return (
     <header className="header">
-      <div className="logo">
+      <div className="logo" onClick={() => (window.location.href = '/')}>
         <img src="/icons/Ex'sLogo.webp" alt="Logo" />
       </div>
       <nav className={`nav ${menuOpen ? 'open' : ''}`}>
         <ul>
-          <li><a href="#blog">Blog</a></li>
-          <li><a href="/contact-us">Contact</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
-          <li><a href="/about-us">About</a></li>
-          <li><a href="/gallery">Gallery</a></li>
-          <li><a href="/services">Services</a></li>
-          <li><a href="/">Home</a></li>
+          {navItems.map((item) => (
+            <li
+              key={item.path}
+              className={location.pathname === item.path ? 'active' : ''}
+            >
+              <a href={item.path}>{item.name}</a>
+            </li>
+          ))}
         </ul>
+        {/* Social Media Icons (Visible only on Mobile) */}
+        <div className="header-social-icons">
+          <FaFacebook className="social-icon" />
+          <FaInstagram className="social-icon" />
+          <FaTwitter className="social-icon" />
+        </div>
       </nav>
       <div className="language-toggle" onClick={toggleLanguage}>
         {language}

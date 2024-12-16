@@ -6,29 +6,40 @@
   padding: 20px;
   background-color: #030a06;
   color: white;
-  position: relative;
+  position: sticky;
+  top: 0;
   z-index: 1000;
   direction: ltr;
+  overflow: hidden; /* Prevent content spillover */
+}
+
+.logo {
+  cursor: pointer;
 }
 
 .logo img {
   margin-left: 150px;
+  transition: transform 0.3s ease, opacity 0.3s ease; /* Add transition for smooth hover effect */
+}
+
+.logo img:hover {
+  transform: scale(1.1); /* Scale the logo up */
+  opacity: 0.9; /* Slightly reduce opacity for effect */
 }
 
 .nav {
   display: flex;
   justify-content: space-around;
   width: 50%;
-  direction: rtl;
   position: relative;
   z-index: 1000;
 }
 
-/* Navigation Menu for Large Screens */
 .nav ul {
   display: flex;
   list-style: none;
   gap: 20px;
+  direction: ltr; /* Ensures correct order */
 }
 
 .nav ul li a {
@@ -36,6 +47,38 @@
   text-decoration: none;
   font-size: 28px;
   font-weight: bolder;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.nav ul li a:hover {
+  background-color: #ff6444; /* Highlight color */
+  border-radius: 5px;
+  color: rgb(0, 0, 0);
+}
+
+.nav ul li.active a {
+  background-color: #ff6444;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: rgb(0, 0, 0);
+}
+
+/* Social Media Icons (Hidden by Default) */
+.header-social-icons {
+  display: none;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.header-social-icons .social-icon {
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.header-social-icons .social-icon:hover {
+  color: #1e4a75;
 }
 
 /* Language Toggle */
@@ -48,7 +91,7 @@
   border: 2px solid white;
   padding: 5px 15px;
   border-radius: 20px;
-  margin-right: 150px; /* Adjust based on the layout */
+  margin-right: 150px;
   transition: all 0.3s ease;
 }
 
@@ -57,12 +100,17 @@
   color: #030a06;
 }
 
-/* Mobile Menu Toggle Icon */
+/* Mobile Menu */
 .menu-toggle {
   display: none;
   cursor: pointer;
   flex-direction: column;
   gap: 5px;
+  position: absolute; /* Keeps it positioned within the header */
+  top: 50%; /* Vertically center within the header */
+  right: 20px; /* Align to the right */
+  transform: translateY(-50%); /* Center it perfectly vertically */
+  z-index: 1001; /* Ensure it stays above the content */
 }
 
 .menu-toggle .bar {
@@ -72,73 +120,79 @@
   transition: all 0.3s ease;
 }
 
-/* Transform hamburger to X when menu is open */
 .menu-toggle.open .bar:nth-child(1) {
   transform: rotate(45deg) translateY(8px);
 }
 
 .menu-toggle.open .bar:nth-child(2) {
-  opacity: 0; /* Hide the middle bar */
+  opacity: 0;
 }
 
 .menu-toggle.open .bar:nth-child(3) {
   transform: rotate(-45deg) translateY(-8px);
 }
 
-/* Mobile Navigation - Hidden by Default */
+/* Mobile Navigation */
 @media (max-width: 768px) {
   .nav {
-    display: none; /* Hidden by default */
+    display: none;
     position: absolute;
-    top: 100%; /* Below the header */
+    top: 100%;
     left: 0;
     right: 0;
     background-color: #143d63;
-    height: 120VH;
+    height: 100vh;
     padding: 20px;
-    z-index: 999; /* Ensure the nav appears above other elements */
-    width: 100%; /* Full width */
-    box-sizing: border-box; /* Include padding in width */
-    transition: all 0.3s ease; /* Smooth transition */
+    z-index: 999;
+    width: 100%;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
   }
 
   .nav.open {
-    display: flex; /* Show the nav when the menu is open */
-    flex-direction: column; /* Stack items vertically */
-    align-items: center; /* Center items horizontally */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed; /* Prevent shifting other components */
+    top: 100px; /* Adjust based on header height */
+    left: 0;
+    right: 0;
+    height: calc(100vh - 60px); /* Full height minus header */
+    overflow-y: auto;
+    background-color: #143d63;
+    z-index: 1000;
   }
 
   .nav ul {
-    flex-direction: column-reverse; /* Stack items vertically */
+    flex-direction: column;
     text-align: center;
     padding: 0;
     margin: 0;
   }
 
-  .nav ul li {
-    margin-bottom: 15px; /* Space between menu items */
-  }
+  /* .nav ul li {
+    margin-bottom: 5px;
+  } */
 
-  /* Hide the last item’s margin */
   .nav ul li:last-child {
     margin-bottom: 0;
   }
 
-  /* Show the Menu Toggle Icon */
+  /* Social Media Icons (Visible only on Mobile) */
+  .header-social-icons {
+    display: flex;
+  }
+
+  /* Show the Menu Toggle */
   .menu-toggle {
     display: flex;
   }
 
-  /* Animate the Hamburger Icon to an X */
-  .menu-toggle.open .bar:nth-child(1) {
-    transform: rotate(45deg) translateY(7px);
+  .language-toggle {
+    margin-right: 40px; /* Adjust language toggle for mobile screens */
   }
 
-  .menu-toggle.open .bar:nth-child(2) {
-    opacity: 0;
-  }
-
-  .menu-toggle.open .bar:nth-child(3) {
-    transform: rotate(-45deg) translateY(-7px);
+  .logo img {
+    margin-left: 10px; /* Adjust logo positioning for mobile */
   }
 }

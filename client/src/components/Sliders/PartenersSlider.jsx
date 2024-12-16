@@ -6,14 +6,15 @@ import '../../CSS/slider.css';
 
 const PartenersSlider = () => {
   const settings = {
-    dots: true,
+    dots: false, // Disable dots for a cleaner look
     infinite: true,
-    speed: 300,
+    speed: 3000, // Speed of the continuous slide (in ms)
     slidesToShow: 3, // Number of slides visible at once
     slidesToScroll: 1, // Number of slides to scroll at once
-    autoplay: true, // Autoplay the slides
-    autoplaySpeed: 2000, // Speed of autoplay (in ms)
-    pauseOnHover: true, // Pause when hovering
+    autoplay: true, // Enable autoplay
+    autoplaySpeed: 0, // Set to 0 to allow continuous motion
+    cssEase: "linear", // Makes the transition smooth and linear
+    pauseOnHover: false, // Avoid pausing on hover for continuous effect
     responsive: [
       {
         breakpoint: 1024,
@@ -34,22 +35,22 @@ const PartenersSlider = () => {
 
   return (
     <div className="slider-container" id="parteners">
-      <h2>شركائنا</h2>
+      <h2>Our Clients</h2>
       <Slider {...settings}>
-        <div>
-          <img src="https://cdn.vox-cdn.com/thumbor/ln4IHgPYpvNoIWpJ2Y1_c9msxXA=/0x0:2012x1341/2000x1333/filters:focal(1006x670:1007x671)/cdn.vox-cdn.com/uploads/chorus_asset/file/15483559/google2.0.0.1441125613.jpg" alt="Slide 1" />
+        <div className="partener-slide-div">
+          <img src="/images/gallary/IMG-20241010-WA0048.jpg" alt="Slide 1" />
         </div>
-        <div>
-          <img src="https://www.majidalfuttaim.com/images/default-source/banners/maf-logo-sa141f6b59-fd6c-4ac7-a3bd-c4e4917e11a8.png?sfvrsn=68b0c302_3" alt="Slide 2" />
+        <div className="partener-slide-div">
+          <img src="/images/gallary/IMG-20241010-WA0049.jpg" alt="Slide 2" />
         </div>
-        <div>
-          <img src="https://www.nasa.gov/wp-content/uploads/2018/07/s75-31690.jpeg" alt="Slide 3" />
+        <div className="partener-slide-div">
+          <img src="/images/gallary/IMG-20241010-WA0050.jpg" alt="Slide 3" />
         </div>
-        <div>
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFMPbViwO9GkdbOArGK3khg6sJ85ftrQAsfg&s" alt="Slide 4" />
+        <div className="partener-slide-div">
+          <img src="/images/gallary/IMG-20241010-WA0051.jpg" alt="Slide 4" />
         </div>
-        <div>
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdtJMLanUveetWInIRrdkhzKQEAj-BVGHoOw&s" alt="Slide 5" />
+        <div className="partener-slide-div">
+          <img src="/images/gallary/IMG-20241010-WA0052.jpg" alt="Slide 5" />
         </div>
       </Slider>
     </div>

@@ -7,6 +7,8 @@ import Up from '../components/Other/Up';
 import ServiceCard from "../components/Other/ServicesComponent";
 import AboutUs from "../components/Other/AboutUsCom"; // Make sure the name matches your component's file
 import ApplyWithUs from "../components/Other/ApplyWithUs";
+import PartenersSlider from '../components/Sliders/PartenersSlider';
+import TestimonialSlider from '../components/Sliders/TestimonialsSlider';
 
 const HomePage = () => {
     return (
@@ -14,6 +16,7 @@ const HomePage = () => {
             <div className="overlay-image"></div>
             <Header />
             <HeroSection />
+            <AboutUs />
             <ServiceCard />
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" fill="#ff6444" id='HeroSvgflip'>
                 <path 
@@ -21,8 +24,10 @@ const HomePage = () => {
                 </path>
             </svg>
             <MallSlider />
-            <AboutUs />
+            
             <ApplyWithUs />
+            <PartenersSlider />
+            <TestimonialSlider />
             <Up />
             <Footer />
         </div>

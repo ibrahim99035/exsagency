@@ -1,45 +1,54 @@
 .footer {
-  background-color: #ff6444;
+  background-color: #000000;
   color: white;
-  padding: 50px 20px;
+  height: 70vh;
+  padding: 50px 20px; /* Simplified padding */
+  box-sizing: border-box; /* Ensures padding is included in the total size */
   direction: ltr;
+  position: relative;
+  z-index: 998;
 }
-  
+
 .footer-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  grid-template-columns: repeat(2, 1fr); /* 2 columns */
   gap: 20px;
   max-width: 1200px;
   margin: 0 auto;
+  align-items: start; /* Align items at the top */
 }
-  
-/* Logo Section */
+
 .logo-section {
   text-align: center;
-  grid-column: span 3; /* Span across all columns for centered logo */
+  grid-column: span 2; /* Spans across both columns */
   position: relative;
-  z-index: 999;
 }
-  
+
 .footer-logo {
   max-width: 150px; /* Adjust the size of your logo */
+  height: auto;
   margin-bottom: 20px;
+  cursor: pointer;
+  transition: transform 0.3s ease, filter 0.3s ease;
 }
-  
+
+.footer-logo:hover {
+  transform: scale(1.1); /* Slightly enlarge the logo */
+  filter: brightness(1.2); /* Brighten the logo */
+}
+
 .footer-section {
   padding: 10px;
-  position: relative;
-  z-index: 1000;
 }
-  
+
 .footer-section h3 {
   font-size: 20px;
   margin-bottom: 15px;
 }
 
 .footer-section p {
-  font-size: 14px;
-  line-height: 1.8;
+  font-size: 14px; /* Consistent text size */
+  line-height: 1.6; /* Improved readability */
   color: #f2f2f2;
 }
 
@@ -59,38 +68,45 @@
 }
 
 .footer-section ul li a:hover {
-  color: #e3e3e3;
+  color: #ff6444;
   text-decoration: underline;
 }
-.social{
-  width: 110%;
+
+/* Social Section */
+.social {
+  width: 100%; /* Ensure it doesn't overflow */
+  margin-top: 10px;
 }
-/* Social Icons */
+
+.social-icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center icons */
+  width: 100%; /* Prevent overflow */
+}
+
 .social-icons a {
   color: white;
-  margin-right: 15px;
-  font-size: 20px;
+  margin: 0 10px; /* Adjust spacing */
+  font-size: 16px; /* Adjust icon size */
   text-decoration: none;
+  transition: color 0.3s ease;
 }
 
 .social-icons a:hover {
-  color: #f2f2f2;
+  color: #ff6444;
+  animation: hover-bounce 0.6s;
 }
 
+/* Footer Bottom Section */
 .footer-bottom {
   text-align: center;
   border-top: 1px solid #e5e5e5;
   padding: 20px 0;
-  margin-top: 40px;
-  position: relative;
-  z-index: 999;
 }
 
 .footer-bottom p {
   font-size: 14px;
-}
-
-#copyrightparagraph{
   color: white;
 }
 
@@ -101,43 +117,21 @@
 }
 
 .footer-bottom a:hover {
-  color: #e3e3e3;
+  color: #ff6444;
+  animation: hover-bounce 0.6s;
 }
 
-#whatsappIcon:hover{
-  color: #128C7E;
-}
-
-#instgramIcon:hover{
-  color: #e6683c;
-}
-
-#twitterIcon:hover{
-  color: black;
-}
-
-#linkedIcon:hover{
-  color: #0A66C2;
-}
-
-#facebookIcon:hover{
-  color: #1877F2;
-}
-
-#gmailIcon:hover{
-  color: #EA4335;
-}
-
-#youtubeIcon:hover{
-  color: #FF0000;
-}
-
-#telegramIcon:hover{
-  color: #0088CC;
-}
-
-#tiktokIcon:hover{
-  color: #490d1c;
+/* Add Keyframes for Hover Bounce Animation */
+@keyframes hover-bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0); /* Stay in place */
+  }
+  40% {
+    transform: translateY(-10px); /* Move up */
+  }
+  60% {
+    transform: translateY(-5px); /* Slightly less up */
+  }
 }
 
 /* Responsive Design */
@@ -149,11 +143,23 @@
 
 @media (max-width: 768px) {
   .footer-grid {
-    grid-template-columns: repeat(1, 1fr); /* 1 column on mobile */
+    grid-template-columns: 1fr; /* 1 column on mobile */
     text-align: center;
   }
 
   .logo-section {
-    grid-column: span 1;
+    grid-column: span 1; /* Adjust to span 1 column */
+  }
+
+  .footer-section {
+    text-align: center; /* Center content on mobile */
+  }
+
+  .footer-section h3 {
+    font-size: 18px; /* Adjust heading size for mobile */
+  }
+
+  .footer-section p {
+    font-size: 12px; /* Adjust paragraph size for mobile */
   }
 }

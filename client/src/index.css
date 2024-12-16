@@ -61,7 +61,7 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   z-index: 1;
-  opacity: 0.04; 
+  opacity: 0; 
 }
 
 /* Styling for section and footer elements */
