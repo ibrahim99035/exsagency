@@ -17,13 +17,15 @@ const userSchema = new mongoose.Schema({
     },
     role: {
         type: String,
-        enum: ['admin', 'moderator'],
+        enum: ['admin', 'moderator', 'author'],
         default: 'moderator',
     },
     approval: {
         type: Boolean,
         default: false,  
     },
+    profilePicture: String,
+    bio: String,
 }, {
     timestamps: true,
 });
