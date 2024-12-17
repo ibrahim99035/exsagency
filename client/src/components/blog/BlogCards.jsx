@@ -20,7 +20,7 @@ const BlogCards = () => {
         ))}
       </div>
       <div className="all-blogs-button-container">
-        <Link to="/blogs" className="all-blogs-button">View All Blogs</Link>
+        <Link to="/blogs" className="all-blogs-button" target="_blank">View All Blogs</Link>
       </div>
     </div>
   );
