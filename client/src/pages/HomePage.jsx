@@ -9,6 +9,7 @@ import AboutUs from "../components/Other/AboutUsCom"; // Make sure the name matc
 import ApplyWithUs from "../components/Other/ApplyWithUs";
 import PartenersSlider from '../components/Sliders/PartenersSlider';
 import TestimonialSlider from '../components/Sliders/TestimonialsSlider';
+import BlogCards from '../components/blog/BlogCards';
 
 const HomePage = () => {
     return (
@@ -26,6 +27,7 @@ const HomePage = () => {
             <MallSlider />
             
             <ApplyWithUs />
+            <BlogCards />
             <PartenersSlider />
             <TestimonialSlider />
             <Up />

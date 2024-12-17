@@ -26,6 +26,8 @@ import GalleryPage from './pages/GalleryPage';
 import { Provider } from 'react-redux';
 import store from './redux/store';
 import SocialMediaColumn from './components/Other/SocialMediaColumn';
+import AllBlogsPage from './pages/AllBlogsPage';
+import SingleBlogPage from './pages/SingleBlogPage';
 
 function App() {
 
@@ -159,6 +161,22 @@ function App() {
                   <ApplyNow />
                 </>
               }
+            />
+            <Route
+              path='/blogs'
+              element = {
+                <>
+                  <AllBlogsPage />
+                </>
+              }
+            />
+            <Route 
+                path="/blog/:slug" 
+                element = {
+                  <>
+                    <SingleBlogPage />
+                  </>
+                } 
             />
           </Routes>
         </BrowserRouter>

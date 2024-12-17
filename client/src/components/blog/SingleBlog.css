@@ -1,0 +1,40 @@
+.single-blog {
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 998;
+    background-color: white;
+    border: #333 solid 1px;
+    border-radius: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .single-blog-cover {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  .single-blog-content {
+    margin-top: 30px;
+  }
+  
+  .single-blog h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #333;
+  }
+  
+  .single-blog p {
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.6;
+    margin-top: 20px;
+  }
+  
+  .single-blog strong {
+    font-weight: bold;
+  }  
