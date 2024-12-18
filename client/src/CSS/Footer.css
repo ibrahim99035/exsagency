@@ -11,25 +11,34 @@
 
 .footer-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 columns */
-  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto; /* Ensure no empty rows */
+  gap: 0;
   max-width: 1200px;
   margin: 0 auto;
-  align-items: start; /* Align items at the top */
+  align-items: start;
 }
 
 .logo-section {
-  text-align: center;
-  grid-column: span 2; /* Spans across both columns */
-  position: relative;
+  text-align: left; /* Align the logo to the left */
+  grid-column: 1 / 2; /* Place the logo in the first column */
+  grid-row: 1 / 2; /* Ensure it shares the first row with other elements */
+  margin: 0; /* Remove any external margins */
+  padding: 0; /* Reset padding */
 }
 
 .footer-logo {
-  max-width: 150px; /* Adjust the size of your logo */
+  max-width: 500px; /* Increase the size to 500px or any other value */
   height: auto;
   margin-bottom: 20px;
   cursor: pointer;
   transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.footer-logo img {
+  width: 100%; /* Make the logo responsive */
+  max-width: 1000px; /* Increase the max-width to make the logo larger */
+  height: auto;
 }
 
 .footer-logo:hover {
@@ -74,6 +83,7 @@
 
 /* Social Section */
 .social {
+  grid-column: span 3; /* Span across all 3 columns in the 2nd row */
   width: 100%; /* Ensure it doesn't overflow */
   margin-top: 10px;
 }
@@ -81,7 +91,7 @@
 .social-icons {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center; /* Center icons */
+  justify-content: start; /* Align icons to the start (left) */
   width: 100%; /* Prevent overflow */
 }
 
@@ -138,6 +148,11 @@
 @media (max-width: 1024px) {
   .footer-grid {
     grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */
+    grid-template-rows: auto auto; /* Maintain rows */
+  }
+
+  .social {
+    grid-column: span 2; /* Adjust for 2-column layout */
   }
 }
 
@@ -149,6 +164,14 @@
 
   .logo-section {
     grid-column: span 1; /* Adjust to span 1 column */
+  }
+  
+  .footer-logo img {
+    max-width: 500px; /* Smaller size on mobile */
+  }
+
+  .social {
+    grid-column: span 1; /* Adjust for single-column layout */
   }
 
   .footer-section {

@@ -11,6 +11,8 @@ import PartenersSlider from '../components/Sliders/PartenersSlider';
 import TestimonialSlider from '../components/Sliders/TestimonialsSlider';
 import BlogCards from '../components/blog/BlogCards';
 import PopUpCardGrid from '../components/Other/PopUpCardGrid';
+import MailSub from '../components/Other/MailSub';
+
 const HomePage = () => {
     return (
         <div>
@@ -30,6 +32,7 @@ const HomePage = () => {
             <BlogCards />
             <PartenersSlider />
             <TestimonialSlider />
+            <MailSub />
             <Up />
             <Footer />
         </div>

@@ -1,7 +1,7 @@
 import React from 'react';
 import { useInView } from 'react-intersection-observer';
 import PopUpCard from './PopUpCard';
-import '../../CSS/PopUpCardGrid.css';
+import '../../CSS/PopUpCardGrid.css'; 
 
 import { FaBullhorn } from "react-icons/fa";       // Advertising & Promotion
 import { FaChartBar } from "react-icons/fa";       // Analytics & Insights
@@ -41,7 +41,7 @@ const PopUpCardGrid = () => {
 
   return (
     <div id='popupcardcontainer'>   
-      <h2>Our Services</h2> 
+      <h2>Our Marketing Services</h2> 
       <div className="popcard-grid">
         {cards.map((card, index) => (
           <div ref={card.ref} key={index}>
@@ -54,6 +54,12 @@ const PopUpCardGrid = () => {
             />
           </div>
         ))}
+      </div>
+      {/* Button to navigate to /services */}
+      <div className="services-button-container">
+        <a href="/services" target="_blank" rel="noopener noreferrer" className="services-button">
+          Learn More About Our Services
+        </a>
       </div>
     </div>
   );

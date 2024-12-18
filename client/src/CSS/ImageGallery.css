@@ -1,41 +1,113 @@
-/* ImageGallery.css */
-
+/* Main gallery container */
 .gallery-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive grid */
-    gap: 15px; /* Space between images */
-    padding: 20px; /* Padding around the gallery */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Dynamic grid with responsive behavior */
+    gap: 15px;
+    padding: 20px;
+    transition: all 0.3s ease;
+    grid-auto-rows: 200px; /* Ensure that the rows maintain some height for random sized images */
 }
 
+/* Gallery item container */
 .gallery-item {
-    position: relative; /* Positioning context for hover effect */
-    overflow: hidden; /* Hide overflow */
-    border-radius: 8px; /* Rounded corners */
-    transition: transform 0.3s ease; /* Smooth scale effect */
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .gallery-item:hover {
-    transform: scale(1.05); /* Scale up on hover */
+    transform: scale(1.05); /* Zoom effect */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Soft shadow on hover */
 }
 
 /* Different sizes for gallery items */
 .gallery-item.small {
-    grid-column: span 1; /* Takes 1 column */
+    grid-row: span 1; /* Takes 1 row */
 }
 
 .gallery-item.medium {
-    grid-column: span 2; /* Takes 2 columns */
-}
-
-.gallery-item.large {
-    grid-column: span 2; /* Takes 2 columns */
     grid-row: span 2; /* Takes 2 rows */
 }
 
-.gallery-image {
-    width: 100%; /* Make images responsive */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 8px; /* Match rounded corners */
+.gallery-item.large {
+    grid-row: span 3; /* Takes 3 rows */
 }
 
+/* Image overlay with text */
+.image-overlay {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay for text */
+    transition: background 0.3s ease;
+}
 
+.gallery-image {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+}
+
+.overlay-text {
+    position: absolute;
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover .overlay-text {
+    opacity: 1; /* Text appears on hover */
+}
+
+/* Modal styling */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    padding: 10px; /* Padding around modal */
+    margin-top: 60px;
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 80%; /* Adjust width to make it smaller */
+    max-height: 80%; /* Limit the height */
+    overflow: auto; /* Allow scrolling if the image is too large */
+}
+
+.modal-content img {
+    width: 100%;
+    max-width: 700px; /* Adjust the maximum width of the image */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+}
+
+/* Responsive Modal */
+@media (max-width: 768px) {
+    .modal-content img {
+        max-width: 90%; /* Ensure image is smaller on small screens */
+    }
+    .modal-content {
+        padding: 15px;
+        max-width: 95%; /* Allow more width on smaller screens */
+    }
+}

@@ -25,6 +25,11 @@ const images = [
     { src: '/images/gallary/1bc070_e96abe15b776418ea95243e007d147ec~mv2.webp 5x.webp', alt: 'Image 22' },
 ];
 
+const getRandomSize = () => {
+    const sizes = ['small', 'medium', 'large'];
+    return sizes[Math.floor(Math.random() * sizes.length)];
+};
+
 const ImageGallery = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [selectedImage, setSelectedImage] = useState(null);
@@ -43,11 +48,22 @@ const ImageGallery = () => {
         <>
             <div className="gallery-container">
                 {images.map((image, index) => (
-                    <div className={`gallery-item ${image.size}`} key={index} onClick={() => openModal(image)}>
-                        <img src={image.src} alt={image.alt} className="gallery-image" />
+                    <div className={`gallery-item ${getRandomSize()}`} key={index} onClick={() => openModal(image)}>
+                        <div className="image-overlay">
+                            <img src={image.src} alt={image.alt} className="gallery-image" />
+                            <div className="overlay-text">View Image</div>
+                        </div>
                     </div>
                 ))}
             </div>
+
+            {isModalOpen && (
+                <div className="modal" onClick={closeModal}>
+                    <div className="modal-content">
+                        <img src={selectedImage.src} alt={selectedImage.alt} />
+                    </div>
+                </div>
+            )}
         </>
     );
 };

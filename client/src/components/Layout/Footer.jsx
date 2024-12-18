@@ -45,16 +45,29 @@ const Footer = () => {
 
         {/* Resources Section */}
         <div className="footer-section">
-          <h3>Resources & Links</h3>
+          <h3>Resources</h3>
           <ul>
             <li>
-              <a href="/careers">Career</a> | 
-              <a href="/fqa">FQA</a> | 
-              <a href="/help-center">Support Center</a>
+              <a href="/careers">Career</a>
             </li> 
             <li>
-              <a href="/privacy-policy">Privacy Policy</a> | 
-              <a href="/intellectual-property-rights">Intellectual Property Rights</a> | 
+              <a href="/fqa">FQA</a> 
+            </li> 
+            <li>
+              <a href="/help-center">Support Center</a>
+            </li> 
+          </ul>
+        </div>
+        <div className="footer-section">
+          <h3>Copyrights</h3>
+          <ul>
+            <li>
+              <a href="/privacy-policy">Privacy Policy</a>
+            </li>
+            <li>
+              <a href="/intellectual-property-rights">Intellectual Property Rights</a> 
+            </li>
+            <li>
               <a href="/terms-and-conditions">Terms and Conditions</a>
             </li>
           </ul>
@@ -97,7 +110,7 @@ const Footer = () => {
 
       {/* Footer Bottom Section */}
       <div className="footer-bottom">
-        <p id='copyrightparagraph'>&copy; All Rights Reserved for EX's Company 2024 | Made By <a href="https://www.linkedin.com/in/ibrahim-abu-eita-0b2490206/">Ibrahim Abu Eita</a>.</p>
+        <p id='copyrightparagraph'>&copy; All Rights Reserved for EX's Company 2024 <br/> Made By <a href="https://www.linkedin.com/in/ibrahim-abu-eita-0b2490206/">Ibrahim Abu Eita</a>.</p>
       </div>
     </footer>
   );

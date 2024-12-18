@@ -37,7 +37,7 @@ const MallSlider = () => {
     <>
       <div className="galleryContainerRoot">
         <div className="slider-container">
-          <h2>Gallary</h2>
+          <h2>Portfolio</h2>
           <Slider {...settings}>
             <div>
               <img src="/images/gallary/IMG-20241010-WA0043.jpg" alt="Slide 1" />
@@ -69,7 +69,7 @@ const MallSlider = () => {
             <div>
               <img src="/images/gallary/IMG-20241010-WA0054.jpg" alt="Slide 10" />
             </div>
-          </Slider>
+          </Slider><br /> <br />
           <ImageGallery />
         </div>
         {/* <div id="yellowsvgcontainer">
