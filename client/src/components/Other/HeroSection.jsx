@@ -1,11 +1,16 @@
 import React from 'react';
 import '../../CSS/HeroSection.css';
 import Logo from "/icons/ExesLogoLatge.webp"
+import vid from '/videos/hero-video.mp4'
+
 
 const HeroSection = () => {
   return (
     <>
       <section className="hero">
+        <video autoPlay muted loop className="background-video">
+          <source src={vid} type="video/mp4" />
+        </video>
         <div className="hero-overlay">
           <div className="hero-content">
             <h1 className="hero-title">Unlock Your <br /> &nbsp; &nbsp; Business Potential with</h1>
