@@ -27,10 +27,9 @@ const HomePage = () => {
                 </path>
             </svg>
             <MallSlider />
-            
+            <PartenersSlider />
             <ApplyWithUs />
             <BlogCards />
-            <PartenersSlider />
             <TestimonialSlider />
             <MailSub />
             <Up />

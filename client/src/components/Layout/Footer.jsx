@@ -110,7 +110,7 @@ const Footer = () => {
 
       {/* Footer Bottom Section */}
       <div className="footer-bottom">
-        <p id='copyrightparagraph'>&copy; All Rights Reserved for EX's Company 2024 <br/> Made By <a href="https://www.linkedin.com/in/ibrahim-abu-eita-0b2490206/">Ibrahim Abu Eita</a>.</p>
+        <p id='copyrightparagraph'>&copy; All Rights Reserved for EX's Company 2024 <br/> Made By <a href="https://www.linkedin.com/in/ibrahim-abu-eita-0b2490206/">Ibrahim Abu Eita</a></p>
       </div>
     </footer>
   );

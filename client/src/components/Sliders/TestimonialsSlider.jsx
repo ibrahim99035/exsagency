@@ -15,6 +15,20 @@ const TestimonialSlider = () => {
     autoplaySpeed: 0,
     cssEase: "linear",
     pauseOnHover: false,
+    responsive: [
+      {
+        breakpoint: 768, // For tablets
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 480, // For mobile phones
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
   };
 
   const settingsBottom = {
@@ -28,6 +42,20 @@ const TestimonialSlider = () => {
     cssEase: "linear",
     pauseOnHover: false,
     rtl: true, // Makes the bottom slider move in the opposite direction
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
   };
 
   const testimonials = [

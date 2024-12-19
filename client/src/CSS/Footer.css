@@ -113,6 +113,9 @@
   text-align: center;
   border-top: 1px solid #e5e5e5;
   padding: 20px 0;
+  background-color: #000000;
+  position: relative;
+  z-index: 1000;
 }
 
 .footer-bottom p {
@@ -146,6 +149,9 @@
 
 /* Responsive Design */
 @media (max-width: 1024px) {
+  .footer{
+    width: 103;
+  }
   .footer-grid {
     grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */
     grid-template-rows: auto auto; /* Maintain rows */

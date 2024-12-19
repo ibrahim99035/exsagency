@@ -60,5 +60,6 @@
 @media (max-width: 668px) {
     .popcard {
       width: 100%;
+      margin: auto;
     }
   }

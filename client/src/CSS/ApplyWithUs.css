@@ -1,45 +1,46 @@
 .apply-container {
     display: flex;
+    flex-wrap: wrap; /* Allow wrapping for better responsiveness */
     justify-content: space-between;
     align-items: center;
-    background: linear-gradient(135deg, #ff6444, #ff926b); /* Gradient background */
+    background: linear-gradient(135deg, #ff6444, #ff926b);
     padding: 40px;
     margin: 50px auto;
     border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     color: #ffffff;
-    width: 80%; /* Set the width to 80% */
+    width: 80%;
     position: relative;
     z-index: 998;
 }
 
 .apply-content {
     flex: 1;
-    max-width: 50%; /* Limit the width of the text content */
+    max-width: 50%; 
     padding-right: 20px;
 }
 
 .apply-title {
-    font-size: 34px; /* Larger title for better impact */
+    font-size: 34px; 
     font-weight: bold; 
     margin-bottom: 20px;
-    text-transform: uppercase; /* Add emphasis with uppercase text */
-    letter-spacing: 1px; /* Slight letter spacing for modern feel */
+    text-transform: uppercase; 
+    letter-spacing: 1px;
 }
 
 .apply-description {
-    font-size: 20px; /* Slightly smaller description */
+    font-size: 20px; 
     line-height: 1.8; 
     margin-bottom: 30px;
     color: #f4f4f4;
 }
 
 .apply-button {
-    background-color: #ff6444; /* Keep the original button color */
+    background-color: #ff6444;
     color: white; 
     border: none;
-    border-radius: 5px; /* Keep the original shape */
+    border-radius: 5px; 
     padding: 15px 30px;
     font-size: 18px;
     font-weight: bold;
@@ -56,8 +57,8 @@
 }
 
 .apply-button:hover {
-    background-color: #be4931; /* Darker shade on hover */
-    transform: translateY(-5px); /* Slight lift effect */
+    background-color: #be4931;
+    transform: translateY(-5px); 
 }
 
 .apply-image {
@@ -66,6 +67,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 20px; /* Add spacing for better layout on smaller screens */
 }
 
 .apply-image img {
@@ -74,4 +76,53 @@
     object-fit: cover;
     border-radius: 15px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    .apply-container {
+        flex-direction: column; /* Stack content vertically */
+        padding: 30px;
+    }
+
+    .apply-content, .apply-image {
+        max-width: 100%; /* Make content take full width */
+        padding-right: 0;
+    }
+
+    .apply-title {
+        font-size: 28px; /* Adjust title size for smaller screens */
+    }
+
+    .apply-description {
+        font-size: 18px; /* Reduce description size */
+    }
+
+    .apply-button {
+        padding: 12px 24px; /* Adjust button padding */
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .apply-container {
+        padding: 20px; /* Reduce padding for very small screens */
+    }
+
+    .apply-title {
+        font-size: 24px; /* Further reduce title size */
+    }
+
+    .apply-description {
+        font-size: 16px; /* Adjust description size */
+    }
+
+    .apply-button {
+        font-size: 14px; /* Smaller font for buttons */
+        padding: 10px 20px;
+    }
+
+    .apply-image img {
+        max-height: 300px; /* Limit image height further */
+    }
 }

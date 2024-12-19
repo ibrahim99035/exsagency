@@ -3,7 +3,7 @@
     padding: 30px; /* Padding around the content */
     width: 100%; /* Limit the width for better readability */
     margin: 50px auto; /* Center the component */
-    font-family: 'Arial', sans-serif; /* Choose a readable font */
+    font-family: "Tajawal", serif; /* Choose a readable font */
     position: relative;
     z-index: 999;
     margin-top: -10px;

@@ -74,6 +74,9 @@
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  .hero{
+    width: 101%;  
+  }
   .hero-title {
       font-size: 2.5rem;
       text-align: center;
@@ -92,6 +95,9 @@
       flex-direction: column;
       align-items: center;
   }
+  #HeroSvg{
+    width: 102%;
+  } 
 }
 
 #HeroSvg{
