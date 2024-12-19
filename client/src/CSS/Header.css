@@ -135,7 +135,7 @@
 /* Mobile Navigation */
 @media (max-width: 768px) {
   .header{
-    width: 101%;
+    width: 105%;
   }
   .nav {
     display: none;

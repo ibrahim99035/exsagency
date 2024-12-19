@@ -48,6 +48,7 @@
 
 .footer-section {
   padding: 10px;
+  background-color: #000000;
 }
 
 .footer-section h3 {
@@ -150,7 +151,7 @@
 /* Responsive Design */
 @media (max-width: 1024px) {
   .footer{
-    width: 103;
+    width: 105;
   }
   .footer-grid {
     grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */

@@ -91,7 +91,7 @@
 /* Responsive Design */
 @media (max-width: 768px) {
   .hero{
-    width: 101%;  
+    width: 105%;  
   }
   .hero-title {
       font-size: 2.5rem;
@@ -112,7 +112,7 @@
       align-items: center;
   }
   #HeroSvg{
-    width: 102%;
+    width: 105%;
   } 
 }
 
